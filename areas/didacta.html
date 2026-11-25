@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DIDACTA · EDUCAUSE 2026</title>
+<meta name="description" content="DIDACTA: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:title" content="DIDACTA · EDUCAUSE 2026">
+<meta property="og:description" content="DIDACTA: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QL4SS1MNE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3QL4SS1MNE', {content_group: 'EDUCAUSE 2026'});</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Estilo LED: cabezote y héroe oscuros, Source Sans 3 + Source Serif 4, amarillo como acento, esquinas rectas. */
+:root{
+  --negro:#191916; --tinta:#1f1f1c; --gris-900:#333331; --gris-700:#595959; --gris-500:#73726d; --gris-300:#bab9b3;
+  --gris-200:#e0dfda; --gris-100:#f0efea; --fondo:#fcfcfa; --blanco:#ffffff; --amarillo:#ffe41e; --amarillo-osc:#e0b800; --amarillo-claro:#fff8cc;
+  --O:#5b4a8b; --O-bg:#efecf6; --F:#0b7310; --F-bg:#eaf4ea; --E:#a85a00; --E-bg:#fbefe0; --C:#1f5786; --C-bg:#e6eef6;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --ancho:1240px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--negro)}
+a{color:var(--tinta);text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--amarillo);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--amarillo-osc);outline-offset:2px}
+.in{max-width:var(--ancho);margin:0 auto;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+@media (max-width:600px){ .in{padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))} }
+h1,h2,h3,h4{font-family:var(--sans);text-wrap:balance;margin:0;line-height:1.2;color:var(--tinta)}
+h2{font-size:clamp(28px,3.2vw,34px);font-weight:400}
+h3{font-size:22px;font-weight:600}
+h4{font-size:18px;font-weight:600}
+p{margin:0}
+.etq{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600;display:block}
+.saltar{position:absolute;left:-999px}
+.saltar:focus{left:16px;top:8px;z-index:50;background:var(--amarillo);padding:8px 12px}
+
+/* Cabezote */
+.cabezote{background:var(--negro);color:var(--fondo);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;border-bottom:1px solid #2e2e2a}
+.cabezote .in{min-height:72px;display:flex;align-items:center;gap:24px}
+.marca{display:flex;align-items:center;gap:14px;color:var(--fondo);text-decoration:none;min-width:0}
+.marca:hover{background:none}
+.marca-logo{display:block;height:44px;width:auto;flex:none}
+.marca-t{font-family:var(--sans);font-size:18px;font-weight:400;padding-left:14px;border-left:1px solid #6b6a64;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--fondo);text-decoration:none;padding:8px 12px;white-space:nowrap;letter-spacing:.01em}
+.menu a:hover,.menu a.on{background:none;box-shadow:inset 0 -3px 0 var(--amarillo)}
+@media (max-width:900px){ .cabezote .in{flex-wrap:wrap;gap:0 16px;padding-block:10px} .menu{margin-left:0;width:100%;margin-top:6px} .menu a{font-size:15px;padding:6px 10px 8px} .marca-t{font-size:16px} }
+@media (max-width:480px){ .marca-t{display:none} }
+
+/* Héroe */
+.heroe{background:var(--negro);color:var(--fondo)}
+.heroe .in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.heroe .etq{color:var(--gris-300)}
+.heroe h1{font-weight:300;font-size:clamp(34px,4.6vw,52px);line-height:1.12;color:var(--fondo);margin:10px 0 18px}
+.heroe .lead{font-size:19px;line-height:1.6;color:#ecebe6}
+.heroe .meta{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.cifras{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3d3d38}
+.cifra{padding:20px 22px;border:1px solid #3d3d38;font-family:var(--sans)}
+.cifra b{display:block;font-weight:300;font-size:40px;line-height:1.1;color:var(--amarillo);font-variant-numeric:tabular-nums}
+.cifra span{font-size:15px;color:#d6d5cf;line-height:1.45;display:block;margin-top:6px}
+@media (max-width:860px){ .heroe .in{grid-template-columns:1fr;padding-block:40px} }
+
+/* Secciones */
+main section{padding-block:64px 8px}
+.cab-sec{border-top:1px solid var(--gris-200);padding-top:28px;margin-bottom:26px;max-width:72ch;display:grid;gap:10px}
+.cab-sec p{color:var(--gris-700)}
+
+.puntos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p;max-width:880px}
+.puntos li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:18px 0;border-bottom:1px solid var(--gris-200)}
+.puntos li strong{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35}
+@media (max-width:640px){ .puntos li{grid-template-columns:1fr} }
+
+.nota{border-left:4px solid var(--amarillo-osc);background:var(--amarillo-claro);padding:16px 20px;margin:26px 0 0;max-width:880px}
+.nota h3,.nota h4{font-size:17px;margin-bottom:8px}
+.nota ul,.nota ol{margin:0;padding-left:20px;display:grid;gap:6px}
+
+/* Dimensiones */
+.dimnav{display:flex;flex-wrap:wrap;gap:0;margin-bottom:30px;border:1px solid var(--gris-200);background:var(--blanco);width:max-content;max-width:100%}
+.dimnav a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;border-right:1px solid var(--gris-200)}
+.dimnav a:last-child{border-right:0}
+.cuad{width:12px;height:12px;background:var(--c);flex:none;display:inline-block}
+.dim{margin-bottom:56px}
+.dim-cab{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:3px solid var(--c);padding-bottom:10px;margin-bottom:16px}
+.dim-cab h3{font-size:clamp(24px,2.6vw,30px);font-weight:400;display:flex;align-items:center;gap:12px}
+.dim-cab .ver{font-family:var(--sans);font-size:15px;font-weight:600}
+.dim .lead{max-width:72ch;font-size:18px;margin-bottom:20px}
+.hallazgos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.hallazgo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:8px;min-width:0}
+.hallazgo p{font-size:16px}
+.hallazgo ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--gris-900);display:grid;gap:4px}
+.fuente{font-family:var(--sans);font-size:14px;color:var(--gris-700);margin-top:auto;padding-top:8px}
+.fuente b{font-weight:600;color:var(--tinta)}
+
+/* Áreas */
+.pestanas{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--gris-300);margin-bottom:24px}
+.pestanas button{font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 16px;border:0;background:none;color:var(--gris-700);cursor:pointer;margin-bottom:-1px;border-bottom:3px solid transparent}
+.pestanas button:hover{color:var(--tinta)}
+.pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--amarillo-osc)}
+.ficha{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px 40px}
+.ficha h3{grid-column:1/-1;font-size:28px;font-weight:400}
+.ficha .bloque{display:grid;gap:10px;align-content:start;min-width:0}
+.ficha ul{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16.5px}
+.ficha .nota{margin:8px 0 0}
+@media (max-width:820px){ .ficha{grid-template-columns:1fr} }
+
+/* Sesiones */
+.filtros{display:grid;gap:12px;background:var(--blanco);border:1px solid var(--gris-200);padding:16px;margin-bottom:16px;font-family:var(--sans)}
+.fila{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fila .lbl{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-500);font-weight:600;min-width:120px}
+.filtros input[type=search]{flex:1 1 280px;min-width:0;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0}
+.filtros select{font:inherit;font-size:15px;padding:9px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0;max-width:100%}
+.chip{font:inherit;font-size:15px;padding:5px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:0}
+.chip:hover{border-color:var(--tinta)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--fondo)}
+.chip[aria-pressed="true"] .n{color:var(--gris-300)}
+.chip .n{color:var(--gris-500);font-variant-numeric:tabular-nums}
+.limpiar{font:inherit;font-size:15px;background:none;border:0;color:var(--tinta);cursor:pointer;text-decoration:underline;text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px;padding:4px}
+.conteo{font-family:var(--sans);font-size:16px;color:var(--gris-700);margin:8px 0}
+.conteo b{color:var(--tinta)}
+.dia{font-family:var(--sans);font-weight:300;font-size:30px;margin:34px 0 6px}
+.hora{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.02em;margin:18px 0 8px;font-variant-numeric:tabular-nums}
+.ses{background:var(--blanco);border:1px solid var(--gris-200);border-left:4px solid var(--c,var(--gris-300));padding:14px 16px;margin:8px 0;display:grid;gap:6px;min-width:0}
+.ses.blk{background:var(--gris-100)}
+.ses-sup{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.ses h4{font-size:18px;line-height:1.3}
+.ses .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.ses .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-family:var(--sans)}
+.tag{font-size:13px;padding:1px 8px;background:var(--gris-100);color:var(--gris-700)}
+.tag.d{background:var(--cbg);color:var(--c);font-weight:600}
+.tag.p{background:none;border:1px solid var(--gris-300)}
+.tag.cu{background:none;border:1px solid var(--amarillo-osc);color:var(--tinta)}
+.mat{flex:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:2px 9px;background:var(--amarillo);color:var(--negro);white-space:nowrap}
+.mat.no{background:var(--gris-100);color:var(--gris-700);font-weight:400}
+.ses details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.ses details p{white-space:pre-line;font-size:16px;margin-top:6px;max-width:80ch}
+.ses .lnk{font-family:var(--sans);font-size:14.5px;color:var(--gris-700);border-left:3px solid var(--amarillo-osc);padding-left:8px}
+.mas{display:block;margin:22px auto 0;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 20px;border:1px solid var(--tinta);background:var(--blanco);color:var(--tinta);cursor:pointer}
+.mas:hover{background:var(--amarillo)}
+.vacio{padding:36px;text-align:center;color:var(--gris-700)}
+
+/* Recursos */
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.rgrupo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);min-width:0}
+.rgrupo h3{font-size:19px;margin-bottom:12px}
+.rgrupo ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rgrupo li a{overflow-wrap:anywhere}
+.rgrupo li span{display:block;font-family:var(--sans);font-size:14px;color:var(--gris-500)}
+
+/* Método */
+.metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);margin-bottom:24px;background:var(--blanco)}
+.metodo div{padding:16px 18px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);font-family:var(--sans)}
+.metodo b{display:block;font-weight:300;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}
+.metodo span{font-size:15px;color:var(--gris-700)}
+.notas{max-width:72ch;display:grid;gap:10px}
+
+/* Pie */
+.pie{background:var(--negro);color:#d6d5cf;margin-top:72px;font-family:var(--sans);font-size:15px}
+.pie .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:28px;padding-block:40px 48px}
+.pie h2{font-family:var(--sans);font-size:20px;font-weight:600;color:var(--fondo);margin-bottom:8px}
+.pie .etq{color:var(--gris-300);margin-bottom:8px}
+.pie a{color:var(--fondo)}
+.pie a:hover{color:var(--negro)}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+@media (max-width:760px){ .pie .in{grid-template-columns:1fr} }
+
+/* Capas y páginas */
+.capa{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--negro);background:var(--amarillo);padding:3px 10px;margin-bottom:12px}
+.miga{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-bottom:14px}
+.miga a{color:var(--fondo)}
+.miga a:hover{color:var(--negro)}
+.heroe.corto .in{grid-template-columns:minmax(0,1fr);padding-block:44px}
+.heroe.corto h1{font-size:clamp(32px,4vw,46px);margin-bottom:12px}
+.rutas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.ruta{padding:22px 22px 24px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ruta .capa{align-self:flex-start;margin:0}
+.ruta h3{font-size:22px;font-weight:400}
+.ruta p{font-size:16px;color:var(--gris-900)}
+.ruta ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-family:var(--sans);font-size:16px}
+.ruta .ir{margin-top:auto;font-family:var(--sans);font-weight:600}
+@media (max-width:900px){ .rutas{grid-template-columns:1fr} }
+.lista-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.lista-areas a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);text-decoration:none}
+.lista-areas a:hover{background:var(--amarillo-claro)}
+.lista-areas strong{font-family:var(--sans);font-size:20px;font-weight:600}
+.lista-areas span{font-size:15.5px;color:var(--gris-700)}
+.destacadas{display:grid;gap:0;border-top:1px solid var(--gris-200)}
+.dest{padding:16px 0;border-bottom:1px solid var(--gris-200);display:grid;gap:4px}
+.dest h4{font-size:18px}
+.dest .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.dest .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.dest ul.mats{margin:2px 0 0;padding-left:20px;font-family:var(--sans);font-size:15.5px}
+.dest details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.dest details p{font-size:16px;margin-top:6px;max-width:80ch;white-space:pre-line}
+.boton{display:inline-block;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 18px;border:1px solid var(--tinta);background:var(--blanco);text-decoration:none;margin-top:18px}
+.boton:hover{background:var(--amarillo)}
+.siguiente{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;border-top:1px solid var(--gris-200);padding-top:24px;font-family:var(--sans)}
+.siguiente a{text-decoration:none;padding:14px 16px;border:1px solid var(--gris-200);background:var(--blanco);display:grid;gap:2px}
+.siguiente a:hover{background:var(--amarillo-claro)}
+.siguiente small{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600}
+.siguiente .der{text-align:right}
+@media (max-width:640px){ .siguiente{grid-template-columns:1fr} .siguiente .der{text-align:left} }
+</style>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabezote"><div class="in">
+<a class="marca" href="../index.html"><img class="marca-logo" src="../logo-led.png" alt="Laboratorio Educativo Digital, Universidad de los Andes" width="115" height="44"><span class="marca-t">EDUCAUSE 2026 · Tecnología y educación superior</span></a>
+<nav class="menu" aria-label="Secciones"><a href="../index.html">Inicio</a><a href="../dimensiones.html">Dimensiones</a><a href="../areas/index.html" class="on" aria-current="page">Áreas</a><a href="../sesiones.html">Sesiones</a><a href="../recursos.html">Recursos</a></nav>
+</div></header>
+<div class="heroe corto"><div class="in"><div><div class="miga"><a href="../index.html">Inicio</a> / <a href="../areas/index.html">Áreas</a> / DIDACTA</div><span class="capa">Capa 2 · Lectura de 5 minutos</span><span class="etq">Ficha por área</span>
+<h1>DIDACTA</h1><p class="lead">DIDACTA es, después de Transformación digital, el área con más sesiones relacionadas (136), y casi todas tratan problemas que ya vive con los profesores. La conferencia mostró que la formación de mayor alcance parte de la confianza, se organiza por disciplina y trabaja sobre tareas reales. También mostró que los asistentes de curso funcionan mejor cuando el profesor los configura y conserva la calificación.</p></div></div></div>
+<main id="contenido">
+<section class="in"><div class="ficha">
+<div class="bloque"><span class="etq">Qué vimos</span><ul><li>Boston College, Northcentral Technical College y UCLA ofrecieron marcos y hojas de trabajo para rediseñar tareas frente a la IA; en Boston College los 11 profesores participantes rediseñaron una tarea.</li><li>University of California, Irvine llevó un asistente acotado a los materiales del curso a más de 120 cursos en tres años, con citas a la página exacta y chats visibles para el profesor.</li><li>Lewis &amp; Clark College alcanzó al 70 % del profesorado con más de 30 talleres y sin presupuesto dedicado, y Northwestern University forma estudiantes guías que co-facilitan con profesores.</li><li>University of Colorado Boulder mide la adopción de sus plantillas y recursos en Canvas con etiquetas HTML, y University of Wisconsin System remedió 436 cursos en un año.</li></ul></div>
+<div class="bloque"><span class="etq">Por qué le importa al área</span><p>DIDACTA es, después de Transformación digital, el área con más sesiones relacionadas (136), y casi todas tratan problemas que ya vive con los profesores. La conferencia mostró que la formación de mayor alcance parte de la confianza, se organiza por disciplina y trabaja sobre tareas reales. También mostró que los asistentes de curso funcionan mejor cuando el profesor los configura y conserva la calificación.</p>
+<div class="nota"><h4>Recomendaciones</h4><ol><li>Ofrecer por departamento talleres de prueba de tareas frente a la IA, con la meta de que cada profesor rediseñe y comparta al menos una.</li><li>Pilotear un asistente de curso acotado a los materiales del profesor en 10 a 15 cursos, con reglas explícitas y grupo de comparación.</li><li>Crear con la Dirección de TI un programa de estudiantes guías de IA y medir la confianza de los profesores antes y después de cada consulta.</li></ol></div></div></div></section>
+<section class="in"><div class="cab-sec"><span class="etq">Para ir más a fondo</span><h2>Sesiones destacadas para DIDACTA</h2><p>Una selección de 10 de las 136 sesiones relacionadas con esta área. Se priorizan las que tienen materiales publicados por sus ponentes, con enlace directo a cada archivo.</p></div>
+<div class="destacadas"><div class="dest"><h4>Beyond the Score: Where AI Can Help with Accessibility Remediation Under Title II</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Medical University of South Carolina</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/55/B/818/79D/AA0/428/997/FF8/B53/774/E2D/FD/a2791_1.pdf" target="_blank" rel="noopener">Beyond the Score Where AI Can Help with Accessibility Remediation Under Title II</a></li></ul><details><summary>Descripción</summary><p>With April 24, 2026, deadlines now in effect for many public institutions, accessibility remediation is no longer optional. Yet even with tools like Ally and other automated checkers, the hardest work remains: legacy files, caption and alt text quality, faculty workflow bottlenecks, third-party content, and the judgment needed to decide what is actually accessible in context. This session explores where generative and agentic AI can realistically help instructional design and teaching support teams speed up accessibility remediation - and where human review, policy, and governance still matter most. Participants will leave with a practical framework for deciding what AI can assist with, what still requires expert review, and what should not be uploaded or automated at all.</p></details></div><div class="dest"><h4>Bridging the Gap: A Faculty-Staff Partnership Model for Student Success Interventions in the LMS</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Colorado Boulder</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/7E/A/205/16B/12C/491/2BF/FE6/831/187/374/F3/a2995_1.pdf" target="_blank" rel="noopener">Bridging the Gap poster</a></li></ul><details><summary>Descripción</summary><p>At research-focused institutions, guidance for faculty on LMS grading and course design is limited. Our Center for Teaching &amp; Learning partnered with the Office of Information Technology to develop a participatory design model with faculty working groups. We created best practices for LMS grading and co-designed LMS course templates to address inconsistencies and promote student success. Learn how we brought together faculty and staff from diverse departments, centered student experiences in the process, and improved adoption of shared practices and LMS course designs, with measurable positive impacts on student experiences in the LMS.</p></details></div><div class="dest"><h4>Dynamic Pedagogy: Personalized, Skills-Based Learning through Adaptivity and Immersive Environments</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Skillwell</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/04/B/E6B/B0D/474/43B/D92/375/642/8C2/D36/F3/a5416_1.pdf" target="_blank" rel="noopener">Dynamic Pedagogy Poster</a></li></ul><details><summary>Descripción</summary><p>The asynchronous, digital education landscape is transitioning from passive content delivery to dynamic learning architectures. To bridge the gap between knowledge acquisition, learning by doing, and the application of key skills and behaviors, this presentation explores two key technologies that, in conjunction, create impactful training with demonstrable results. These technologies are adaptive learner journeys and immersive simulations. One-size-fits-all training or teaching is inefficient, alienating experts while overwhelming novices. Adaptivity solves this by utilizing algorithmic approaches to analyze performance in real time. Instead of a linear path, systems curate bespoke experiences, scaffolding difficulty based on performance data. Every minute spent contributes to growth, keeping cognitive engagement at its peak. Providing personalization at scale, intelligent pathing respects existing knowledge while increasing learning efficiency. If adaptive journeys provide the maps, simulations are the terrain. Training is truly impactful when it is experiential. High-fidelity branching scenarios provide a risk-free environment to fail and iterate. This builds the emotional resonance and &quot;muscle memory&quot; that passive modalities cannot replicate. Students don’t just recall facts; they develop the confidence to apply what they know under pressure. The synergy of data-driven personalization and realistic practice transforms learning into validated competency-based mastery.</p></details></div><div class="dest"><h4>From Barriers to Belonging: How We Rebuilt Course Accessibility with Canvas and UDOIT</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 2 materiales</div>
+<div class="inst">University of Wisconsin System Administration</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/A1/1/C32/22D/E95/43B/9AE/049/11D/634/014/65/a3019_2.pdf" target="_blank" rel="noopener">From Barriers to Belonging Handout</a></li><li><a href="https://files.abstractsonline.com/CTRL/A1/1/C32/22D/E95/43B/9AE/049/11D/634/014/65/a3019_1.pdf" target="_blank" rel="noopener">From Barriers to Belonging Poster</a></li></ul><details><summary>Descripción</summary><p>Many institutions have crossed the April 2026 WCAG 2.1 AA deadline with work still left to do, and now face the challenge of sustaining momentum without a hard deadline driving the effort. If accessibility feels like an unfinished project rather than an embedded practice, this session is for you. Join our instructional design team as we share how we transformed our approach to course accessibility across Canvas using UDOIT and other tools as our engine for discovery, prioritization, and remediation. In this session, we&#x27;ll walk you through our team&#x27;s end-to-end process: how we used UDOIT to audit existing course content at scale; triaged and prioritized the most impactful fixes; partnered with faculty; built accessibility into course design from the start, and tracked our progress toward WCAG 2.1 AA compliance by April 2026. We&#x27;ll be honest about what worked, what surprised us, and what we&#x27;d do differently. Whether you&#x27;re just launching an accessibility initiative or reflecting on your own compliance journey, you&#x27;ll leave with a replicable framework, practical strategies for using Canvas and UDOIT together, and lessons learned from our team&#x27;s real-world experience. Accessibility isn&#x27;t just a compliance checkbox - it&#x27;s a commitment to every learner. Come learn how we made it actionable.</p></details></div><div class="dest"><h4>From Classroom to Day One: How AI + VR Simulations Prepare Students for Workplace Reality</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Deloitte · University of Southern California</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/C1/5/C76/A16/B9E/4BC/EA6/014/61A/BF5/5AB/4C/a2155_1.pdf" target="_blank" rel="noopener">Final version of USC x Deloitte Poster</a></li></ul><details><summary>Descripción</summary><p>Students (and employers) are asking: How do we bridge foundational concepts to day-one professional judgment? This session showcases a tested, classroom-embedded AI-powered virtual reality (VR) simulation that places students inside realistic accounting workplace scenarios: deadline pressure, ambiguous documentation, client demands, and supervisor influence, all while surfacing the ethical friction points that often define real careers. Built by Deloitte in partnership with USC, the experience runs like a choose-your-own-adventure. Students speak and act in branches. They receive AI-driven prompts and feedback and watch a range of consequences unfold: from strengthened trust and promotion-ready behaviors to reprimands, escalation, or job loss when choices cross ethical lines. The pilot engaged 60+ students and faculty, captured detailed user preferences, and earned unanimously positive feedback on educational value. Post-simulation survey results showed 98% student interest in more VR-based learning, 94% recommending it for other activities, and 85% affirming the simulation’s clear value in higher education. Participants will see a live demo and learn a practical implementation playbook that includes syllabus pain-point mapping and scenario design, AI voice-response evaluation, rubrics, and feedback loops with adaptable templates to run a pilot and scale with human-AI collaboration and ethical guardrails.</p></details></div><div class="dest"><h4>From Fear to Fluency: A Grassroots, Collaborative Approach to Campus-Wide AI Literacy</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Lewis &amp; Clark College</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/BB/9/52D/61E/FD0/4AD/093/C5E/79B/068/270/6C/a4483_1.pdf" target="_blank" rel="noopener">Poster</a></li></ul><details><summary>Descripción</summary><p>No mandate. No dedicated budget. Just colleagues who decided waiting wasn&#x27;t an option and a campus community willing to learn and iterate. When LLMs hit the mainstream, our institution didn&#x27;t respond with a top-down policy or a sweeping initiative. Our response grew organically, through conversations with the potential to drive change. IT, librarians and faculty colleagues worked together to organize events and create spaces to weigh in and reflect. Faculty shared expertise. Staff gave time. Enthusiasts became advocates. Skeptics became essential critics, finding the fault lines that turned sharing into iterative learning. This investment has yielded 30+ workshops, four expert speakers, and poster and panel sessions showcasing innovations and student voices. We’ve reached 70% of faculty and hundreds of staff, building a culture of literacy where shared expertise turns individual uncertainty into collective confidence. Results include targeted staff training, for-credit student AI skills courses, a campus AI resource hub, and a cross-functional AI Advisory Group giving our work an institutional shape. When a AI platform was deployed, it wasn&#x27;t IT pushing a tool - it was the faculty advocating for a documented need to support teaching and learning. This poster shares the strategies, lessons, and structures developed during our journey and makes the case that at any institution, the most powerful AI initiative you can build is one your colleagues actually own.</p></details></div><div class="dest"><h4>How Do Students Feel about AI Grading, and How Can You Make AI Grading Work for You?</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of St. Thomas</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/C0/C/616/95D/D0B/429/2A0/1C1/741/8A2/895/18/a651_1.pdf" target="_blank" rel="noopener">AI Grading</a></li></ul><details><summary>Descripción</summary><p>The use of AI for a variety of educational purposes is increasing. Among the potential applications of AI in this context is grading, where AI tools can help provide more detailed feedback to students while maintaining a personalized, rigorous process. However, the use of AI grading can also generate negative feelings among students, which could hamper their overall confidence in learning. Our presentation will focus on empirical data we have collected in multiple courses at both undergraduate and graduate levels regarding students&#x27; perceptions of and responses to AI grading and will also include the process we followed in building an AI grading bot. We aim to provide guidance to educators seeking to use AI for grading in meaningful and positively-viewed ways.</p></details></div><div class="dest"><h4>Media, Identity, and Voice: From Radio Waves to Reels</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Montclair State University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/E3/2/D7D/ABE/C50/453/79F/3CA/5B8/4C9/876/9C/a1253_1.pdf" target="_blank" rel="noopener">Radio Waves to Reels Poster</a></li></ul><details><summary>Descripción</summary><p>Designed for technology-focused educators, this workshop explores how media innovations - from radio and film to today’s short-form video platforms - shape identity, voice, and digital storytelling. By linking media history to contemporary tools students already use, the session highlights how evolving technologies influence authorship, participation, and the circulation of ideas. Participants will engage with practical strategies for integrating media production into their courses, including assignments using podcasts, video essays, and short-form content. Emphasis is placed on leveraging accessible technologies to support multimodal composition and key media literacy. Attendees will leave with adaptable, tech-forward assignments and approaches to scaffolding and assessment that foster creativity, engagement, and digital fluency in today’s media-rich learning environments.</p></details></div><div class="dest"><h4>Myths vs. Reality: What AI in Education Actually Does</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 2 materiales</div>
+<div class="inst">San Jose City College</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/A5/9/A1B/ADA/6E4/4D9/0AB/09D/2B0/028/985/8D/a5267_2.pdf" target="_blank" rel="noopener">Twopage handout with the research sources behind each myth and three questions to ask before ado</a></li><li><a href="https://files.abstractsonline.com/CTRL/A5/9/A1B/ADA/6E4/4D9/0AB/09D/2B0/028/985/8D/a5267_3.pdf" target="_blank" rel="noopener">Full poster six common myths about AI in education the research on each and design moves for c</a></li></ul><details><summary>Descripción</summary><p>AI in education is surrounded by hype, fear, and misunderstanding. These misconceptions often slow innovation, confuse decision-makers, and create unnecessary resistance among faculty and students. This session cuts through the noise with a clear, evidence-based look at what AI actually does in modern learning environments. We’ll unpack the most common myths - from “AI replaces teachers” to “AI encourages cheating” to “AI collects too much data” - and contrast them with real-world practices from classrooms, student services, and academic technology teams. Participants will see how AI supports, rather than replaces, human expertise by automating repetitive tasks, improving feedback loops, identifying at-risk learners earlier, and enabling more personalized learning pathways. Using examples from diverse institutional contexts, we’ll explore how educators, students, and administrators experience AI differently, and why understanding these perspectives is essential for successful adoption. Attendees will leave with a grounded understanding of AI’s capabilities, limitations, and ethical considerations, along with practical strategies for communicating about AI with stakeholders who may be skeptical or overwhelmed. This session is designed for anyone navigating AI adoption in higher education: faculty; instructional designers; IT leaders; student success teams; and administrators seeking clarity, confidence, and actionable insights.</p></details></div><div class="dest"><h4>Narrative-Driven Faculty Development: Using Story and Play to Engage Instructors with Technology</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Florida</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/CE/E/2A7/B44/AB8/449/8BC/D4D/475/3A2/3D5/81/a1978_1.pdf" target="_blank" rel="noopener">Poster for NarrativeDriven Faculty Development</a></li></ul><details><summary>Descripción</summary><p>Faculty often approach instructional technology training with skepticism, fatigue, or limited time as they juggle competing priorities such as accessibility, AI, course design, and institutional initiatives. To address this challenge, a centralized instructional design and technology team at an R1 institution redesigned faculty development to feel less like compliance training and more like a creative, story-driven experience. In this session, instructional designers and technologists will share how they transformed faculty development using story, play, and human-centered design to increase attendance, expand flexible participation options, and make technology and support services more approachable. This approach more than tripled average attendance while broadening access for faculty across campus. Presenters will showcase Course Mapping Camp, a self-paced, camping-themed experience where faculty build aligned course maps, and This Old Course, a renovation-themed series that helps instructors improve existing or inherited courses for accessibility, usability, alignment, and course organization. The session will also include an overview of additional offerings ranging from short, synchronous sessions to semester-long faculty communities. Attendees will leave with practical, low-cost, and scalable strategies for using narrative and play to make faculty development more engaging, memorable, and accessible at their own institutions.</p></details></div></div>
+<a class="boton" href="../sesiones.html?area=didacta">Ver las 136 sesiones relacionadas con DIDACTA</a>
+<div class="nota gris" style="border-left-color:var(--gris-500);background:var(--gris-100)"><p>¿Quiere el panorama general? Lea el <a href="../index.html">resumen de 2 minutos</a> o <a href="../dimensiones.html">las cuatro dimensiones</a>.</p></div>
+<nav class="siguiente" aria-label="Continuar leyendo"><a href="gestion.html"><small>Anterior</small>Gestión académica</a><a class="der" href="transformacion.html"><small>Siguiente</small>Transformación digital</a></nav></section></main>
+<footer class="pie"><div class="in">
+<div><h2>EDUCAUSE Annual Conference 2026</h2><p>Síntesis del Laboratorio Educativo Digital (LED). Vicerrectoría Académica, Universidad de los Andes. Preparada con apoyo de Claude.</p></div>
+<div><span class="etq">Secciones</span><ul><li><a href="../index.html">Inicio</a></li><li><a href="../dimensiones.html">Dimensiones</a></li><li><a href="../areas/index.html">Áreas</a></li><li><a href="../sesiones.html">Sesiones</a></li><li><a href="../recursos.html">Recursos</a></li></ul></div>
+<div><span class="etq">Actualización</span><p>Contenido con corte al 24 de noviembre de 2026. Incluye los materiales publicados por los ponentes después de la conferencia.</p></div>
+</div></footer>
+
+</body>
+</html>

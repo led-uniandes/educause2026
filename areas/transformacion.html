@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transformación digital · EDUCAUSE 2026</title>
+<meta name="description" content="Transformación digital: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:title" content="Transformación digital · EDUCAUSE 2026">
+<meta property="og:description" content="Transformación digital: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QL4SS1MNE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3QL4SS1MNE', {content_group: 'EDUCAUSE 2026'});</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Estilo LED: cabezote y héroe oscuros, Source Sans 3 + Source Serif 4, amarillo como acento, esquinas rectas. */
+:root{
+  --negro:#191916; --tinta:#1f1f1c; --gris-900:#333331; --gris-700:#595959; --gris-500:#73726d; --gris-300:#bab9b3;
+  --gris-200:#e0dfda; --gris-100:#f0efea; --fondo:#fcfcfa; --blanco:#ffffff; --amarillo:#ffe41e; --amarillo-osc:#e0b800; --amarillo-claro:#fff8cc;
+  --O:#5b4a8b; --O-bg:#efecf6; --F:#0b7310; --F-bg:#eaf4ea; --E:#a85a00; --E-bg:#fbefe0; --C:#1f5786; --C-bg:#e6eef6;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --ancho:1240px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--negro)}
+a{color:var(--tinta);text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--amarillo);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--amarillo-osc);outline-offset:2px}
+.in{max-width:var(--ancho);margin:0 auto;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+@media (max-width:600px){ .in{padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))} }
+h1,h2,h3,h4{font-family:var(--sans);text-wrap:balance;margin:0;line-height:1.2;color:var(--tinta)}
+h2{font-size:clamp(28px,3.2vw,34px);font-weight:400}
+h3{font-size:22px;font-weight:600}
+h4{font-size:18px;font-weight:600}
+p{margin:0}
+.etq{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600;display:block}
+.saltar{position:absolute;left:-999px}
+.saltar:focus{left:16px;top:8px;z-index:50;background:var(--amarillo);padding:8px 12px}
+
+/* Cabezote */
+.cabezote{background:var(--negro);color:var(--fondo);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;border-bottom:1px solid #2e2e2a}
+.cabezote .in{min-height:72px;display:flex;align-items:center;gap:24px}
+.marca{display:flex;align-items:center;gap:14px;color:var(--fondo);text-decoration:none;min-width:0}
+.marca:hover{background:none}
+.marca-logo{display:block;height:44px;width:auto;flex:none}
+.marca-t{font-family:var(--sans);font-size:18px;font-weight:400;padding-left:14px;border-left:1px solid #6b6a64;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--fondo);text-decoration:none;padding:8px 12px;white-space:nowrap;letter-spacing:.01em}
+.menu a:hover,.menu a.on{background:none;box-shadow:inset 0 -3px 0 var(--amarillo)}
+@media (max-width:900px){ .cabezote .in{flex-wrap:wrap;gap:0 16px;padding-block:10px} .menu{margin-left:0;width:100%;margin-top:6px} .menu a{font-size:15px;padding:6px 10px 8px} .marca-t{font-size:16px} }
+@media (max-width:480px){ .marca-t{display:none} }
+
+/* Héroe */
+.heroe{background:var(--negro);color:var(--fondo)}
+.heroe .in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.heroe .etq{color:var(--gris-300)}
+.heroe h1{font-weight:300;font-size:clamp(34px,4.6vw,52px);line-height:1.12;color:var(--fondo);margin:10px 0 18px}
+.heroe .lead{font-size:19px;line-height:1.6;color:#ecebe6}
+.heroe .meta{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.cifras{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3d3d38}
+.cifra{padding:20px 22px;border:1px solid #3d3d38;font-family:var(--sans)}
+.cifra b{display:block;font-weight:300;font-size:40px;line-height:1.1;color:var(--amarillo);font-variant-numeric:tabular-nums}
+.cifra span{font-size:15px;color:#d6d5cf;line-height:1.45;display:block;margin-top:6px}
+@media (max-width:860px){ .heroe .in{grid-template-columns:1fr;padding-block:40px} }
+
+/* Secciones */
+main section{padding-block:64px 8px}
+.cab-sec{border-top:1px solid var(--gris-200);padding-top:28px;margin-bottom:26px;max-width:72ch;display:grid;gap:10px}
+.cab-sec p{color:var(--gris-700)}
+
+.puntos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p;max-width:880px}
+.puntos li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:18px 0;border-bottom:1px solid var(--gris-200)}
+.puntos li strong{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35}
+@media (max-width:640px){ .puntos li{grid-template-columns:1fr} }
+
+.nota{border-left:4px solid var(--amarillo-osc);background:var(--amarillo-claro);padding:16px 20px;margin:26px 0 0;max-width:880px}
+.nota h3,.nota h4{font-size:17px;margin-bottom:8px}
+.nota ul,.nota ol{margin:0;padding-left:20px;display:grid;gap:6px}
+
+/* Dimensiones */
+.dimnav{display:flex;flex-wrap:wrap;gap:0;margin-bottom:30px;border:1px solid var(--gris-200);background:var(--blanco);width:max-content;max-width:100%}
+.dimnav a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;border-right:1px solid var(--gris-200)}
+.dimnav a:last-child{border-right:0}
+.cuad{width:12px;height:12px;background:var(--c);flex:none;display:inline-block}
+.dim{margin-bottom:56px}
+.dim-cab{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:3px solid var(--c);padding-bottom:10px;margin-bottom:16px}
+.dim-cab h3{font-size:clamp(24px,2.6vw,30px);font-weight:400;display:flex;align-items:center;gap:12px}
+.dim-cab .ver{font-family:var(--sans);font-size:15px;font-weight:600}
+.dim .lead{max-width:72ch;font-size:18px;margin-bottom:20px}
+.hallazgos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.hallazgo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:8px;min-width:0}
+.hallazgo p{font-size:16px}
+.hallazgo ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--gris-900);display:grid;gap:4px}
+.fuente{font-family:var(--sans);font-size:14px;color:var(--gris-700);margin-top:auto;padding-top:8px}
+.fuente b{font-weight:600;color:var(--tinta)}
+
+/* Áreas */
+.pestanas{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--gris-300);margin-bottom:24px}
+.pestanas button{font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 16px;border:0;background:none;color:var(--gris-700);cursor:pointer;margin-bottom:-1px;border-bottom:3px solid transparent}
+.pestanas button:hover{color:var(--tinta)}
+.pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--amarillo-osc)}
+.ficha{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px 40px}
+.ficha h3{grid-column:1/-1;font-size:28px;font-weight:400}
+.ficha .bloque{display:grid;gap:10px;align-content:start;min-width:0}
+.ficha ul{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16.5px}
+.ficha .nota{margin:8px 0 0}
+@media (max-width:820px){ .ficha{grid-template-columns:1fr} }
+
+/* Sesiones */
+.filtros{display:grid;gap:12px;background:var(--blanco);border:1px solid var(--gris-200);padding:16px;margin-bottom:16px;font-family:var(--sans)}
+.fila{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fila .lbl{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-500);font-weight:600;min-width:120px}
+.filtros input[type=search]{flex:1 1 280px;min-width:0;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0}
+.filtros select{font:inherit;font-size:15px;padding:9px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0;max-width:100%}
+.chip{font:inherit;font-size:15px;padding:5px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:0}
+.chip:hover{border-color:var(--tinta)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--fondo)}
+.chip[aria-pressed="true"] .n{color:var(--gris-300)}
+.chip .n{color:var(--gris-500);font-variant-numeric:tabular-nums}
+.limpiar{font:inherit;font-size:15px;background:none;border:0;color:var(--tinta);cursor:pointer;text-decoration:underline;text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px;padding:4px}
+.conteo{font-family:var(--sans);font-size:16px;color:var(--gris-700);margin:8px 0}
+.conteo b{color:var(--tinta)}
+.dia{font-family:var(--sans);font-weight:300;font-size:30px;margin:34px 0 6px}
+.hora{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.02em;margin:18px 0 8px;font-variant-numeric:tabular-nums}
+.ses{background:var(--blanco);border:1px solid var(--gris-200);border-left:4px solid var(--c,var(--gris-300));padding:14px 16px;margin:8px 0;display:grid;gap:6px;min-width:0}
+.ses.blk{background:var(--gris-100)}
+.ses-sup{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.ses h4{font-size:18px;line-height:1.3}
+.ses .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.ses .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-family:var(--sans)}
+.tag{font-size:13px;padding:1px 8px;background:var(--gris-100);color:var(--gris-700)}
+.tag.d{background:var(--cbg);color:var(--c);font-weight:600}
+.tag.p{background:none;border:1px solid var(--gris-300)}
+.tag.cu{background:none;border:1px solid var(--amarillo-osc);color:var(--tinta)}
+.mat{flex:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:2px 9px;background:var(--amarillo);color:var(--negro);white-space:nowrap}
+.mat.no{background:var(--gris-100);color:var(--gris-700);font-weight:400}
+.ses details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.ses details p{white-space:pre-line;font-size:16px;margin-top:6px;max-width:80ch}
+.ses .lnk{font-family:var(--sans);font-size:14.5px;color:var(--gris-700);border-left:3px solid var(--amarillo-osc);padding-left:8px}
+.mas{display:block;margin:22px auto 0;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 20px;border:1px solid var(--tinta);background:var(--blanco);color:var(--tinta);cursor:pointer}
+.mas:hover{background:var(--amarillo)}
+.vacio{padding:36px;text-align:center;color:var(--gris-700)}
+
+/* Recursos */
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.rgrupo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);min-width:0}
+.rgrupo h3{font-size:19px;margin-bottom:12px}
+.rgrupo ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rgrupo li a{overflow-wrap:anywhere}
+.rgrupo li span{display:block;font-family:var(--sans);font-size:14px;color:var(--gris-500)}
+
+/* Método */
+.metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);margin-bottom:24px;background:var(--blanco)}
+.metodo div{padding:16px 18px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);font-family:var(--sans)}
+.metodo b{display:block;font-weight:300;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}
+.metodo span{font-size:15px;color:var(--gris-700)}
+.notas{max-width:72ch;display:grid;gap:10px}
+
+/* Pie */
+.pie{background:var(--negro);color:#d6d5cf;margin-top:72px;font-family:var(--sans);font-size:15px}
+.pie .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:28px;padding-block:40px 48px}
+.pie h2{font-family:var(--sans);font-size:20px;font-weight:600;color:var(--fondo);margin-bottom:8px}
+.pie .etq{color:var(--gris-300);margin-bottom:8px}
+.pie a{color:var(--fondo)}
+.pie a:hover{color:var(--negro)}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+@media (max-width:760px){ .pie .in{grid-template-columns:1fr} }
+
+/* Capas y páginas */
+.capa{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--negro);background:var(--amarillo);padding:3px 10px;margin-bottom:12px}
+.miga{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-bottom:14px}
+.miga a{color:var(--fondo)}
+.miga a:hover{color:var(--negro)}
+.heroe.corto .in{grid-template-columns:minmax(0,1fr);padding-block:44px}
+.heroe.corto h1{font-size:clamp(32px,4vw,46px);margin-bottom:12px}
+.rutas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.ruta{padding:22px 22px 24px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ruta .capa{align-self:flex-start;margin:0}
+.ruta h3{font-size:22px;font-weight:400}
+.ruta p{font-size:16px;color:var(--gris-900)}
+.ruta ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-family:var(--sans);font-size:16px}
+.ruta .ir{margin-top:auto;font-family:var(--sans);font-weight:600}
+@media (max-width:900px){ .rutas{grid-template-columns:1fr} }
+.lista-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.lista-areas a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);text-decoration:none}
+.lista-areas a:hover{background:var(--amarillo-claro)}
+.lista-areas strong{font-family:var(--sans);font-size:20px;font-weight:600}
+.lista-areas span{font-size:15.5px;color:var(--gris-700)}
+.destacadas{display:grid;gap:0;border-top:1px solid var(--gris-200)}
+.dest{padding:16px 0;border-bottom:1px solid var(--gris-200);display:grid;gap:4px}
+.dest h4{font-size:18px}
+.dest .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.dest .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.dest ul.mats{margin:2px 0 0;padding-left:20px;font-family:var(--sans);font-size:15.5px}
+.dest details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.dest details p{font-size:16px;margin-top:6px;max-width:80ch;white-space:pre-line}
+.boton{display:inline-block;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 18px;border:1px solid var(--tinta);background:var(--blanco);text-decoration:none;margin-top:18px}
+.boton:hover{background:var(--amarillo)}
+.siguiente{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;border-top:1px solid var(--gris-200);padding-top:24px;font-family:var(--sans)}
+.siguiente a{text-decoration:none;padding:14px 16px;border:1px solid var(--gris-200);background:var(--blanco);display:grid;gap:2px}
+.siguiente a:hover{background:var(--amarillo-claro)}
+.siguiente small{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600}
+.siguiente .der{text-align:right}
+@media (max-width:640px){ .siguiente{grid-template-columns:1fr} .siguiente .der{text-align:left} }
+</style>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabezote"><div class="in">
+<a class="marca" href="../index.html"><img class="marca-logo" src="../logo-led.png" alt="Laboratorio Educativo Digital, Universidad de los Andes" width="115" height="44"><span class="marca-t">EDUCAUSE 2026 · Tecnología y educación superior</span></a>
+<nav class="menu" aria-label="Secciones"><a href="../index.html">Inicio</a><a href="../dimensiones.html">Dimensiones</a><a href="../areas/index.html" class="on" aria-current="page">Áreas</a><a href="../sesiones.html">Sesiones</a><a href="../recursos.html">Recursos</a></nav>
+</div></header>
+<div class="heroe corto"><div class="in"><div><div class="miga"><a href="../index.html">Inicio</a> / <a href="../areas/index.html">Áreas</a> / Transformación digital</div><span class="capa">Capa 2 · Lectura de 5 minutos</span><span class="etq">Ficha por área</span>
+<h1>Transformación digital</h1><p class="lead">Transformación digital está en el centro de casi todo lo que vimos, porque la IA institucional depende de identidades, datos, conocimiento y contratos que esta área gestiona. El 2027 EDUCAUSE Top 10 lo refleja en el valor real de la IA (tema 1), la seguridad con confianza (3), las estructuras para innovar (4), el gobierno de datos (7) y la reducción de fricción (10). Las instituciones que avanzaron midieron uso activo, consolidaron plataformas y asignaron un dueño a cada servicio.</p></div></div></div>
+<main id="contenido">
+<section class="in"><div class="ficha">
+<div class="bloque"><span class="etq">Qué vimos</span><ul><li>Es el área con más sesiones (305 relacionadas, 256 como tema principal), con predominio de gobierno de IA, ciberseguridad, datos y gestión de servicios.</li><li>Penn State lanzó su plataforma AI Studio en 86 días y llegó a 11.228 cuentas, y University of Southern California pasó de cerca de la mitad a casi siete de cada diez usuarios activos.</li><li>Texas A&amp;M University unificó 17 herramientas de gestión de servicios en una y reporta ahorros anuales de más de 532.000 dólares; Tufts University redujo 2.130 artículos de soporte a 533 antes de montar su chatbot.</li><li>Montana State University montó una plataforma de IA con modelos abiertos sobre su propio cómputo para más de 20.000 personas, porque las licencias comerciales eran inalcanzables.</li></ul></div>
+<div class="bloque"><span class="etq">Por qué le importa al área</span><p>Transformación digital está en el centro de casi todo lo que vimos, porque la IA institucional depende de identidades, datos, conocimiento y contratos que esta área gestiona. El 2027 EDUCAUSE Top 10 lo refleja en el valor real de la IA (tema 1), la seguridad con confianza (3), las estructuras para innovar (4), el gobierno de datos (7) y la reducción de fricción (10). Las instituciones que avanzaron midieron uso activo, consolidaron plataformas y asignaron un dueño a cada servicio.</p>
+<div class="nota"><h4>Recomendaciones</h4><ol><li>Reportar cada semestre usuarios activos sobre habilitados de las herramientas de IA institucionales, por facultad y perfil, y atender las zonas de bajo uso con visitas y sesiones cortas.</li><li>Ordenar la base de conocimiento de soporte con roles de dueño, autor y aprobador antes de montar cualquier chatbot.</li><li>Estimar el costo a cinco años de las licencias de IA y evaluar una alternativa con modelos abiertos sobre infraestructura propia.</li></ol></div></div></div></section>
+<section class="in"><div class="cab-sec"><span class="etq">Para ir más a fondo</span><h2>Sesiones destacadas para Transformación digital</h2><p>Una selección de 10 de las 305 sesiones relacionadas con esta área. Se priorizan las que tienen materiales publicados por sus ponentes, con enlace directo a cada archivo.</p></div>
+<div class="destacadas"><div class="dest"><h4>Accessibility Is Security: Why Inclusive Systems Protect Everyone</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Toptal</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/27/C/C83/861/503/431/187/D9B/F92/2D8/B6A/62/a2360_1.pdf" target="_blank" rel="noopener">Toptal Educause Poster Accessibility Is Security</a></li></ul><details><summary>Descripción</summary><p>Higher education institutions invest heavily in cybersecurity to protect research, student records, and institutional systems. Yet accessibility barriers within security infrastructure are often overlooked. When authentication tools, identity verification systems, or emergency alerts are inaccessible, students and staff with disabilities may be unable to access critical services. These failures introduce operational risk and weaken identity assurance. This session explores accessibility as a component of risk management, infrastructure reliability, and identity access resilience. Panelists will examine real campus scenarios involving multifactor authentication, CAPTCHA verification, and emergency communication systems, and provide practical strategies for integrating accessibility into cybersecurity architecture and procurement.</p></details></div><div class="dest"><h4>Beyond Tickets: How Communication Powers Enterprise Service Management</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Minnesota State University, Mankato</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/22/5/799/313/7F6/466/A94/96D/CA9/601/4A8/85/a3725_1.pdf" target="_blank" rel="noopener">Beyond Tickets How Communication Powers Enterprise Service Management Poster</a></li></ul><details><summary>Descripción</summary><p>Enterprise service management is often viewed through the lens of systems, workflows, and ticketing. However, without a strong communication strategy, even the best tools fall short. This session explores how communications and the Solutions Center partner to deliver a more effective user-centered service experience. We will demonstrate through a real-world approach how knowledge content, rather than static documentation, functions as a core communication strategy. By focusing on clarity, consistency, and audience needs, institutions can reduce confusion, improve self-service, and free staff time for more complex work. Participants will learn how aligning communications with service delivery transforms the user experience, strengthens knowledge management practices, and supports scalable enterprise service management. This session will provide practical examples, lessons learned, and strategies that can be adapted to institutions at any stage of their ESM journey.</p></details></div><div class="dest"><h4>Building an Institutional AI Platform from the Inside</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Ithaca College</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/F9/B/BE6/E3F/54C/459/EBB/25E/FC9/208/2D6/F4/a2085_1.pdf" target="_blank" rel="noopener">Ithaca College Poster Session 2026</a></li></ul><details><summary>Descripción</summary><p>Many institutions exploring AI are evaluating vendor platforms or waiting for their ERP to add features. A small data team at a midsized institution took a different path: building Aurora, an internal AI platform that connects directly to existing campus systems through a layered architecture designed to be maintained by the same people who already manage those systems. This poster presents the architecture patterns behind Aurora, from identity resolution and data service abstraction to multi-agent AI pipelines with human-in-the-loop controls. The focus is not on what one institution built, but on the transferable design decisions that make institutional AI feasible for teams without dedicated AI engineering staff.</p></details></div><div class="dest"><h4>Campus as an AI Sandbox: Open-Source Smart Building Infrastructure for Agentic AI Education</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">The University of Electro-Communications</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/E5/9/398/124/4D9/446/EA1/AAB/B2C/A9F/965/1A/a2906_1.pdf" target="_blank" rel="noopener">Campus as an AI Sandbox OpenSource Smart Building Infrastructure for Agentic AI Education Poster</a></li></ul><details><summary>Descripción</summary><p>What if campus infrastructure - lighting, HVAC, elevators, and energy systems - could become a fully open, student-modifiable AI sandbox? This poster introduces an open-source, five-layer smart building platform spanning a data ingestion layer; a vendor-agnostic device abstraction layer; a unified API Gateway layer; a custom control logic layer; and an AI agent layer deployed across multiple campus buildings. We will discuss how students design and deploy real agentic AI applications through project-based learning, presenting a concrete framework for transforming closed campus infrastructure into a transparent, extensible Living Laboratory for responsible AI education. Attendees will obtain practical insights and an architectural model they can apply at their own institutions.</p></details></div><div class="dest"><h4>Collective Defense in Action: Building a Next-Gen Shared Security Operations Center for Higher Ed</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 2 materiales</div>
+<div class="inst">Indiana University · Palo Alto Networks</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/89/E/6FB/5AB/1DD/4AE/D9C/8B5/FEA/BCD/31E/C8/a5275_2.pdf" target="_blank" rel="noopener">Collective Defense in Action Building a NextGen Shared SOC for Higher Education Poster Handout</a></li><li><a href="https://files.abstractsonline.com/CTRL/89/E/6FB/5AB/1DD/4AE/D9C/8B5/FEA/BCD/31E/C8/a5275_1.pdf" target="_blank" rel="noopener">Collective Defense in Action Building a NextGen Shared SOC for Higher Education Poster Slide</a></li></ul><details><summary>Descripción</summary><p>OmniSOC, an impact-driven university-hosted managed security service provider (MSSP) serving higher education and research institutions, has transformed its security operations by adopting a next-generation AI- and ML-enabled platform (Cortex XSIAM) to deliver high-value managed security services. By pooling resources and combining advanced technology with in-house expertise, OmniSOC demonstrates the power of a shared services model for modern cybersecurity. This session explores how a collective defense approach creates “herd immunity” across member institutions, improving security outcomes while reducing costs. Attendees will learn how AI-driven automation replaces manual triage of high-volume incidents, enabling security teams to focus on advanced threat hunting and protection of sensitive research. Through this case study, participants will evaluate whether a shared security operations model is a fit for their institution, and include considerations for joining or partnering with a community-based MSSP. Attendees will leave with practical insights into leveraging shared services and AI-enabled platforms to strengthen campus security.</p></details></div><div class="dest"><h4>Dollars and Sense: What Your IT Services Really Cost</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Northern Arizona University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/85/7/E63/D62/A89/4A2/5BD/483/073/DAA/9DA/B0/a3785_1.pdf" target="_blank" rel="noopener">Service Costing poster</a></li></ul><details><summary>Descripción</summary><p>Higher education IT leaders are increasingly asked to demonstrate value, justify investments, and guide institutional strategy - but many lack a clear understanding of what their services actually cost to deliver. Traditional approaches relying on ticket counts, timesheets, or overly complex models often fail to produce actionable insight. This session presents a pragmatic, scalable approach to service costing that leverages existing data sources - finance, HR, procurement, and service catalogs - to estimate the true cost of delivering enterprise IT services such as email, networking, and learning management systems. Without introducing burdensome tracking mechanisms, institutions can achieve sufficient precision to support executive decision-making. Participants will learn how to define services and products to avoid double counting, map staff effort without timesheets, and align costs with institutional strategy. The session will also explore how service costing enables meaningful conversations with senior leadership, supports sourcing decisions, and elevates ITSM as a strategic partner. Whether you are just beginning or refining your approach, this session will provide practical techniques, lessons learned, and a roadmap for getting started immediately.</p></details></div><div class="dest"><h4>From Checklists to Culture: Redefining Value through Integrated IT Quality Management</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Auburn University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/5A/A/05C/9AC/833/410/C80/981/611/E07/11C/9C/a1724_1.pdf" target="_blank" rel="noopener">Auburn University Quality Management with Integrations poster</a></li></ul><details><summary>Descripción</summary><p>In the high-impact environment of university IT, the term &quot;quality&quot; is often treated as a final hurdle rather than a foundational strategy. Although a dedicated quality office is a powerful catalyst, the true key to institutional reliability lies in a comprehensive ecosystem of standards, processes, and tools. At Auburn University, our Quality Management team’s ongoing journey has been one of significant strides and hard-won lessons; while we have not perfected every corner of the enterprise, our evolution over several years has shifted the needle from just software testing to a proactive culture of excellence. This session bridges the gap between tactical execution and strategic impact by mapping the journey from operational essentials - such as testing and defect management - to the high-stakes integration of technical change and release management. Utilizing experience from multiple implementations, our discussion examines how to balance external SaaS vendor playbooks with internal quality standards to ensure post-go-live stability. Attendees will learn how to secure senior leadership buy-in by translating technical quality into institutional value. We will frame quality not as a technical metric, but as a safeguard against legal exposure, financial risk, and damage to brand reputation. Join us to hear how a maturing team is navigating the path toward a scalable quality roadmap that protects the experiences of students, faculty, staff, and stakeholders.</p></details></div><div class="dest"><h4>From Launch to Activation: USC&#x27;s Enterprise AI Journey</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Southern California</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/C3/3/16B/2CE/952/40A/F8E/2E9/0DD/F67/5BB/AA/a1759_1.pdf" target="_blank" rel="noopener">From Launch to Activation USCs Enterprise AI Journey</a></li></ul><details><summary>Descripción</summary><p>In early 2026, the University of Southern California (USC) launched enterprise AI capabilities to support teaching, learning, research, and administrative operations. While initial deployment focused on technical enablement, long-term success now involves driving meaningful and sustained adoption across a higher education landscape. This session examines USC’s transition from individual AI tool deployment to sustained activation. It will outline the organizational change management strategies used to support rollout, the development of a scalable training and enablement model, and approaches to driving adoption across distinct personas - including students, faculty, and staff. Attendees will gain insight into how USC is creating the building blocks for a Center of Excellence to coordinate governance, training, and innovation. The session emphasizes practical frameworks that institutions can apply to move beyond implementation toward measuring impact.</p></details></div><div class="dest"><h4>From Mascot to Mission: Building Trust and Engagement through Character Creation</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Notre Dame</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/D4/8/9D1/353/DB8/452/89C/FD7/FA1/3A5/1AA/3F/a2888_1.pdf" target="_blank" rel="noopener">From Mascot to Mission Meet Scout</a></li></ul><details><summary>Descripción</summary><p>In what promises to be a crowd-stopping, bright and engaging poster session, viewers will learn how a familiar mascot can turn cybersecurity education from routine messaging into an engaging campus experience. Using colorful and real-life print samples, a playable game, and takeaway stickers, onlookers will get to know Scout the Information Security Guide/Guard dog. This poster will show how your university can also leverage creative talents, AI tools, and accessible software to create a character identity across print, email, social media, and a game-based learning experience to make phishing awareness and cybersecurity more relatable, creative, and effective.</p></details></div><div class="dest"><h4>From Strategy to Action: Using Strategic Roadmaps to Drive IT Transformation</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">The Pennsylvania State University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/6E/2/055/132/3EA/496/5A9/83B/DDF/B88/0A7/DA/a1612_1.pdf" target="_blank" rel="noopener">From Strategy to Action Using Strategic Roadmaps to Drive IT Transformation</a></li></ul><details><summary>Descripción</summary><p>Strategic plans establish direction, yet many organizations struggle to turn vision into coordinated action. This poster explores how strategic roadmaps function as practical tools that connect aspiration to execution. When thoughtfully developed, roadmaps align stakeholders, clarify priorities, and guide complex initiatives, even amid financial constraints, organizational change, and shifting user expectations.</p></details></div></div>
+<a class="boton" href="../sesiones.html?area=transformacion">Ver las 305 sesiones relacionadas con Transformación digital</a>
+<div class="nota gris" style="border-left-color:var(--gris-500);background:var(--gris-100)"><p>¿Quiere el panorama general? Lea el <a href="../index.html">resumen de 2 minutos</a> o <a href="../dimensiones.html">las cuatro dimensiones</a>.</p></div>
+<nav class="siguiente" aria-label="Continuar leyendo"><a href="didacta.html"><small>Anterior</small>DIDACTA</a><a class="der" href="../sesiones.html"><small>Siguiente</small>Todas las sesiones</a></nav></section></main>
+<footer class="pie"><div class="in">
+<div><h2>EDUCAUSE Annual Conference 2026</h2><p>Síntesis del Laboratorio Educativo Digital (LED). Vicerrectoría Académica, Universidad de los Andes. Preparada con apoyo de Claude.</p></div>
+<div><span class="etq">Secciones</span><ul><li><a href="../index.html">Inicio</a></li><li><a href="../dimensiones.html">Dimensiones</a></li><li><a href="../areas/index.html">Áreas</a></li><li><a href="../sesiones.html">Sesiones</a></li><li><a href="../recursos.html">Recursos</a></li></ul></div>
+<div><span class="etq">Actualización</span><p>Contenido con corte al 24 de noviembre de 2026. Incluye los materiales publicados por los ponentes después de la conferencia.</p></div>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trayectoria profesional · EDUCAUSE 2026</title>
+<meta name="description" content="Trayectoria profesional: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:title" content="Trayectoria profesional · EDUCAUSE 2026">
+<meta property="og:description" content="Trayectoria profesional: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QL4SS1MNE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3QL4SS1MNE', {content_group: 'EDUCAUSE 2026'});</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Estilo LED: cabezote y héroe oscuros, Source Sans 3 + Source Serif 4, amarillo como acento, esquinas rectas. */
+:root{
+  --negro:#191916; --tinta:#1f1f1c; --gris-900:#333331; --gris-700:#595959; --gris-500:#73726d; --gris-300:#bab9b3;
+  --gris-200:#e0dfda; --gris-100:#f0efea; --fondo:#fcfcfa; --blanco:#ffffff; --amarillo:#ffe41e; --amarillo-osc:#e0b800; --amarillo-claro:#fff8cc;
+  --O:#5b4a8b; --O-bg:#efecf6; --F:#0b7310; --F-bg:#eaf4ea; --E:#a85a00; --E-bg:#fbefe0; --C:#1f5786; --C-bg:#e6eef6;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --ancho:1240px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--negro)}
+a{color:var(--tinta);text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--amarillo);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--amarillo-osc);outline-offset:2px}
+.in{max-width:var(--ancho);margin:0 auto;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+@media (max-width:600px){ .in{padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))} }
+h1,h2,h3,h4{font-family:var(--sans);text-wrap:balance;margin:0;line-height:1.2;color:var(--tinta)}
+h2{font-size:clamp(28px,3.2vw,34px);font-weight:400}
+h3{font-size:22px;font-weight:600}
+h4{font-size:18px;font-weight:600}
+p{margin:0}
+.etq{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600;display:block}
+.saltar{position:absolute;left:-999px}
+.saltar:focus{left:16px;top:8px;z-index:50;background:var(--amarillo);padding:8px 12px}
+
+/* Cabezote */
+.cabezote{background:var(--negro);color:var(--fondo);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;border-bottom:1px solid #2e2e2a}
+.cabezote .in{min-height:72px;display:flex;align-items:center;gap:24px}
+.marca{display:flex;align-items:center;gap:14px;color:var(--fondo);text-decoration:none;min-width:0}
+.marca:hover{background:none}
+.marca-logo{display:block;height:44px;width:auto;flex:none}
+.marca-t{font-family:var(--sans);font-size:18px;font-weight:400;padding-left:14px;border-left:1px solid #6b6a64;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--fondo);text-decoration:none;padding:8px 12px;white-space:nowrap;letter-spacing:.01em}
+.menu a:hover,.menu a.on{background:none;box-shadow:inset 0 -3px 0 var(--amarillo)}
+@media (max-width:900px){ .cabezote .in{flex-wrap:wrap;gap:0 16px;padding-block:10px} .menu{margin-left:0;width:100%;margin-top:6px} .menu a{font-size:15px;padding:6px 10px 8px} .marca-t{font-size:16px} }
+@media (max-width:480px){ .marca-t{display:none} }
+
+/* Héroe */
+.heroe{background:var(--negro);color:var(--fondo)}
+.heroe .in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.heroe .etq{color:var(--gris-300)}
+.heroe h1{font-weight:300;font-size:clamp(34px,4.6vw,52px);line-height:1.12;color:var(--fondo);margin:10px 0 18px}
+.heroe .lead{font-size:19px;line-height:1.6;color:#ecebe6}
+.heroe .meta{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.cifras{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3d3d38}
+.cifra{padding:20px 22px;border:1px solid #3d3d38;font-family:var(--sans)}
+.cifra b{display:block;font-weight:300;font-size:40px;line-height:1.1;color:var(--amarillo);font-variant-numeric:tabular-nums}
+.cifra span{font-size:15px;color:#d6d5cf;line-height:1.45;display:block;margin-top:6px}
+@media (max-width:860px){ .heroe .in{grid-template-columns:1fr;padding-block:40px} }
+
+/* Secciones */
+main section{padding-block:64px 8px}
+.cab-sec{border-top:1px solid var(--gris-200);padding-top:28px;margin-bottom:26px;max-width:72ch;display:grid;gap:10px}
+.cab-sec p{color:var(--gris-700)}
+
+.puntos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p;max-width:880px}
+.puntos li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:18px 0;border-bottom:1px solid var(--gris-200)}
+.puntos li strong{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35}
+@media (max-width:640px){ .puntos li{grid-template-columns:1fr} }
+
+.nota{border-left:4px solid var(--amarillo-osc);background:var(--amarillo-claro);padding:16px 20px;margin:26px 0 0;max-width:880px}
+.nota h3,.nota h4{font-size:17px;margin-bottom:8px}
+.nota ul,.nota ol{margin:0;padding-left:20px;display:grid;gap:6px}
+
+/* Dimensiones */
+.dimnav{display:flex;flex-wrap:wrap;gap:0;margin-bottom:30px;border:1px solid var(--gris-200);background:var(--blanco);width:max-content;max-width:100%}
+.dimnav a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;border-right:1px solid var(--gris-200)}
+.dimnav a:last-child{border-right:0}
+.cuad{width:12px;height:12px;background:var(--c);flex:none;display:inline-block}
+.dim{margin-bottom:56px}
+.dim-cab{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:3px solid var(--c);padding-bottom:10px;margin-bottom:16px}
+.dim-cab h3{font-size:clamp(24px,2.6vw,30px);font-weight:400;display:flex;align-items:center;gap:12px}
+.dim-cab .ver{font-family:var(--sans);font-size:15px;font-weight:600}
+.dim .lead{max-width:72ch;font-size:18px;margin-bottom:20px}
+.hallazgos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.hallazgo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:8px;min-width:0}
+.hallazgo p{font-size:16px}
+.hallazgo ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--gris-900);display:grid;gap:4px}
+.fuente{font-family:var(--sans);font-size:14px;color:var(--gris-700);margin-top:auto;padding-top:8px}
+.fuente b{font-weight:600;color:var(--tinta)}
+
+/* Áreas */
+.pestanas{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--gris-300);margin-bottom:24px}
+.pestanas button{font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 16px;border:0;background:none;color:var(--gris-700);cursor:pointer;margin-bottom:-1px;border-bottom:3px solid transparent}
+.pestanas button:hover{color:var(--tinta)}
+.pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--amarillo-osc)}
+.ficha{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px 40px}
+.ficha h3{grid-column:1/-1;font-size:28px;font-weight:400}
+.ficha .bloque{display:grid;gap:10px;align-content:start;min-width:0}
+.ficha ul{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16.5px}
+.ficha .nota{margin:8px 0 0}
+@media (max-width:820px){ .ficha{grid-template-columns:1fr} }
+
+/* Sesiones */
+.filtros{display:grid;gap:12px;background:var(--blanco);border:1px solid var(--gris-200);padding:16px;margin-bottom:16px;font-family:var(--sans)}
+.fila{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fila .lbl{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-500);font-weight:600;min-width:120px}
+.filtros input[type=search]{flex:1 1 280px;min-width:0;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0}
+.filtros select{font:inherit;font-size:15px;padding:9px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0;max-width:100%}
+.chip{font:inherit;font-size:15px;padding:5px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:0}
+.chip:hover{border-color:var(--tinta)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--fondo)}
+.chip[aria-pressed="true"] .n{color:var(--gris-300)}
+.chip .n{color:var(--gris-500);font-variant-numeric:tabular-nums}
+.limpiar{font:inherit;font-size:15px;background:none;border:0;color:var(--tinta);cursor:pointer;text-decoration:underline;text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px;padding:4px}
+.conteo{font-family:var(--sans);font-size:16px;color:var(--gris-700);margin:8px 0}
+.conteo b{color:var(--tinta)}
+.dia{font-family:var(--sans);font-weight:300;font-size:30px;margin:34px 0 6px}
+.hora{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.02em;margin:18px 0 8px;font-variant-numeric:tabular-nums}
+.ses{background:var(--blanco);border:1px solid var(--gris-200);border-left:4px solid var(--c,var(--gris-300));padding:14px 16px;margin:8px 0;display:grid;gap:6px;min-width:0}
+.ses.blk{background:var(--gris-100)}
+.ses-sup{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.ses h4{font-size:18px;line-height:1.3}
+.ses .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.ses .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-family:var(--sans)}
+.tag{font-size:13px;padding:1px 8px;background:var(--gris-100);color:var(--gris-700)}
+.tag.d{background:var(--cbg);color:var(--c);font-weight:600}
+.tag.p{background:none;border:1px solid var(--gris-300)}
+.tag.cu{background:none;border:1px solid var(--amarillo-osc);color:var(--tinta)}
+.mat{flex:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:2px 9px;background:var(--amarillo);color:var(--negro);white-space:nowrap}
+.mat.no{background:var(--gris-100);color:var(--gris-700);font-weight:400}
+.ses details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.ses details p{white-space:pre-line;font-size:16px;margin-top:6px;max-width:80ch}
+.ses .lnk{font-family:var(--sans);font-size:14.5px;color:var(--gris-700);border-left:3px solid var(--amarillo-osc);padding-left:8px}
+.mas{display:block;margin:22px auto 0;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 20px;border:1px solid var(--tinta);background:var(--blanco);color:var(--tinta);cursor:pointer}
+.mas:hover{background:var(--amarillo)}
+.vacio{padding:36px;text-align:center;color:var(--gris-700)}
+
+/* Recursos */
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.rgrupo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);min-width:0}
+.rgrupo h3{font-size:19px;margin-bottom:12px}
+.rgrupo ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rgrupo li a{overflow-wrap:anywhere}
+.rgrupo li span{display:block;font-family:var(--sans);font-size:14px;color:var(--gris-500)}
+
+/* Método */
+.metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);margin-bottom:24px;background:var(--blanco)}
+.metodo div{padding:16px 18px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);font-family:var(--sans)}
+.metodo b{display:block;font-weight:300;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}
+.metodo span{font-size:15px;color:var(--gris-700)}
+.notas{max-width:72ch;display:grid;gap:10px}
+
+/* Pie */
+.pie{background:var(--negro);color:#d6d5cf;margin-top:72px;font-family:var(--sans);font-size:15px}
+.pie .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:28px;padding-block:40px 48px}
+.pie h2{font-family:var(--sans);font-size:20px;font-weight:600;color:var(--fondo);margin-bottom:8px}
+.pie .etq{color:var(--gris-300);margin-bottom:8px}
+.pie a{color:var(--fondo)}
+.pie a:hover{color:var(--negro)}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+@media (max-width:760px){ .pie .in{grid-template-columns:1fr} }
+
+/* Capas y páginas */
+.capa{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--negro);background:var(--amarillo);padding:3px 10px;margin-bottom:12px}
+.miga{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-bottom:14px}
+.miga a{color:var(--fondo)}
+.miga a:hover{color:var(--negro)}
+.heroe.corto .in{grid-template-columns:minmax(0,1fr);padding-block:44px}
+.heroe.corto h1{font-size:clamp(32px,4vw,46px);margin-bottom:12px}
+.rutas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.ruta{padding:22px 22px 24px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ruta .capa{align-self:flex-start;margin:0}
+.ruta h3{font-size:22px;font-weight:400}
+.ruta p{font-size:16px;color:var(--gris-900)}
+.ruta ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-family:var(--sans);font-size:16px}
+.ruta .ir{margin-top:auto;font-family:var(--sans);font-weight:600}
+@media (max-width:900px){ .rutas{grid-template-columns:1fr} }
+.lista-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.lista-areas a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);text-decoration:none}
+.lista-areas a:hover{background:var(--amarillo-claro)}
+.lista-areas strong{font-family:var(--sans);font-size:20px;font-weight:600}
+.lista-areas span{font-size:15.5px;color:var(--gris-700)}
+.destacadas{display:grid;gap:0;border-top:1px solid var(--gris-200)}
+.dest{padding:16px 0;border-bottom:1px solid var(--gris-200);display:grid;gap:4px}
+.dest h4{font-size:18px}
+.dest .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.dest .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.dest ul.mats{margin:2px 0 0;padding-left:20px;font-family:var(--sans);font-size:15.5px}
+.dest details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.dest details p{font-size:16px;margin-top:6px;max-width:80ch;white-space:pre-line}
+.boton{display:inline-block;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 18px;border:1px solid var(--tinta);background:var(--blanco);text-decoration:none;margin-top:18px}
+.boton:hover{background:var(--amarillo)}
+.siguiente{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;border-top:1px solid var(--gris-200);padding-top:24px;font-family:var(--sans)}
+.siguiente a{text-decoration:none;padding:14px 16px;border:1px solid var(--gris-200);background:var(--blanco);display:grid;gap:2px}
+.siguiente a:hover{background:var(--amarillo-claro)}
+.siguiente small{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600}
+.siguiente .der{text-align:right}
+@media (max-width:640px){ .siguiente{grid-template-columns:1fr} .siguiente .der{text-align:left} }
+</style>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabezote"><div class="in">
+<a class="marca" href="../index.html"><img class="marca-logo" src="../logo-led.png" alt="Laboratorio Educativo Digital, Universidad de los Andes" width="115" height="44"><span class="marca-t">EDUCAUSE 2026 · Tecnología y educación superior</span></a>
+<nav class="menu" aria-label="Secciones"><a href="../index.html">Inicio</a><a href="../dimensiones.html">Dimensiones</a><a href="../areas/index.html" class="on" aria-current="page">Áreas</a><a href="../sesiones.html">Sesiones</a><a href="../recursos.html">Recursos</a></nav>
+</div></header>
+<div class="heroe corto"><div class="in"><div><div class="miga"><a href="../index.html">Inicio</a> / <a href="../areas/index.html">Áreas</a> / Trayectoria profesional</div><span class="capa">Capa 2 · Lectura de 5 minutos</span><span class="etq">Ficha por área</span>
+<h1>Trayectoria profesional</h1><p class="lead">El tema 2 del Top 10 pide preparar a los estudiantes con habilidades de pensamiento durables y transferibles, y eso toca de lleno a Trayectoria profesional. Las sesiones mostraron una brecha entre universidades que restringen la IA en los exámenes y empleadores que la exigen, y destacaron el juicio, la verificación y la capacidad de explicar decisiones como lo que más se valora en el trabajo. El empleo estudiantil en servicios de la propia universidad apareció como una vía concreta de experiencia profesional.</p></div></div></div>
+<main id="contenido">
+<section class="in"><div class="ficha">
+<div class="bloque"><span class="etq">Qué vimos</span><ul><li>Trayectoria profesional tuvo una presencia modesta (24 sesiones relacionadas), concentrada en empleabilidad, IA y empleo estudiantil.</li><li>Boston University encontró que los asistentes comerciales de carrera dieron respuestas menos profundas que los chatbots generales ante la consulta de un estudiante de primera generación.</li><li>University of Texas at San Antonio mide la trayectoria temprana de sus egresados con perfiles públicos de LinkedIn y organizó sesiones de escucha con empleadores sobre lo que esperan del uso de IA.</li><li>En University of Wyoming el 50 % del personal de TI son estudiantes, y Northeastern University señaló que los empleos que piden habilidades de IA pagan una prima del 28 %.</li></ul></div>
+<div class="bloque"><span class="etq">Por qué le importa al área</span><p>El tema 2 del Top 10 pide preparar a los estudiantes con habilidades de pensamiento durables y transferibles, y eso toca de lleno a Trayectoria profesional. Las sesiones mostraron una brecha entre universidades que restringen la IA en los exámenes y empleadores que la exigen, y destacaron el juicio, la verificación y la capacidad de explicar decisiones como lo que más se valora en el trabajo. El empleo estudiantil en servicios de la propia universidad apareció como una vía concreta de experiencia profesional.</p>
+<div class="nota"><h4>Recomendaciones</h4><ol><li>Validar con empleadores colombianos qué competencias de uso de IA esperan de los egresados, con sesiones de escucha estructuradas como las de University of Texas at San Antonio.</li><li>Auditar por grupo de estudiantes cualquier herramienta de orientación de carrera con IA antes de contratarla.</li><li>Convertir el empleo estudiantil en TI, el LED y otros servicios en una ruta de experiencia profesional documentada, con niveles y funciones por escrito.</li></ol></div></div></div></section>
+<section class="in"><div class="cab-sec"><span class="etq">Para ir más a fondo</span><h2>Sesiones destacadas para Trayectoria profesional</h2><p>Una selección de 10 de las 24 sesiones relacionadas con esta área. Se priorizan las que tienen materiales publicados por sus ponentes, con enlace directo a cada archivo.</p></div>
+<div class="destacadas"><div class="dest"><h4>Building Student AI Innovation through Entrepreneurship: A Replicable Model for Higher Education</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Florida State University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/0A/9/138/617/B6E/4F8/CA3/C1C/088/B3B/C02/96/a3371_1.pdf" target="_blank" rel="noopener">Poster for Presentation</a></li></ul><details><summary>Descripción</summary><p>Higher education leaders are under increasing pressure to prepare students for an AI-driven future, yet many institutions struggle to design scalable and inclusive learning experiences. This session presents a proven model for a 48-hour AI hackathon developed through a partnership between a public research university and a cloud provider. The AI Maker Challenge enabled interdisciplinary student teams to build real-world solutions, including a research grant matching platform, a student productivity system, and a personalized health care application. Several projects are now advancing toward institutional implementation or start-up development, demonstrating the event’s effectiveness as an innovation incubator. Attendees will learn how to structure high-impact partnerships in which the industry partner provides infrastructure, tools, and technical expertise while the university delivers space, logistics, and institutional pathways. The session also introduces a three-tier accessibility framework (no-code, low-code, and full development) that supports participation across skill levels.Participants will leave with a practical playbook for launching similar initiatives, including partnership models, budget frameworks, infrastructure requirements, and post-event support strategies.</p></details></div><div class="dest"><h4>Cybersecurity, AI and Computing Learning Pathways: Catalyzing Collaboration and Career Opportunities</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Slippery Rock University of Pennsylvania</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/8A/F/1E9/6AF/28B/4EC/2B0/1ED/0E7/122/778/63/a2830_1.pdf" target="_blank" rel="noopener">Educause Poster 2026 [ponente] Mary Ann Leung</a></li></ul><details><summary>Descripción</summary><p>The increased integration of High-Performance Computing (HPC), artificial intelligence (AI), cybersecurity, and other emerging technologies necessitates a transformative shift in identifying learning pathways to bridge the skills gap between traditional and modern, automated technological landscapes. Various communities have organized engagement initiatives to enable efficient integration of (HPC), AI, and cybersecurity ecosystems. However, there still exists a need for more regional and national collaborative and structured learning/training resources and activities for upskilling/reskilling the workforce to mitigate gaps. This presentation highlights the insights gained by the National Artificial Intelligence Research Resource (NAIRR) Pilot Sustainable Research Pathways (SRP) program (designed to connect researchers and project leaders with students and faculty across the U.S) and ACM SigHPC education chapter-coordinated HPC training and education workshops to foster collaboration among practitioners from traditional and emerging fields to explore educational needs in HPC, AI, and cybersecurity. We aim, through discussions and case studies centered on learning pathways, to provide insight into research, training and career opportunities; identify opportunities to support regional and national institutions; and broaden access to computing resources through mentorship and collaboration.</p></details></div><div class="dest"><h4>Empowering Student Employees to Utilize Their Own Innovation to Benefit the College for the Future</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Western Carolina University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/1D/A/52B/3C5/412/4D0/186/31B/908/095/CBE/43/a877_2.pdf" target="_blank" rel="noopener">Empowering Student Employees To Utilize Their Own Innovation To Benefit the College For the Future</a></li></ul><details><summary>Descripción</summary><p>This presentation shows a model for transforming student employees from task-oriented support staff into active contributors of long-term technical solutions. Although many colleges use student workers for frontline assistance, their roles often remain limited to repetitive troubleshooting, leaving significant talent untapped. Through peer-to-peer training, mentoring, a creative problem-solving mindset, and intentional project ownership, students are empowered to identify operational challenges and implement sustainable improvements. Students experience classroom and lab technology firsthand, so they are uniquely positioned to design solutions that address real needs. They lead projects such as developing custom tools and resources that continue to benefit the college long after they graduate. This approach has produced more efficient and reliable support, streamlined processes, and long-term solutions. Students report increased engagement, confidence, and stronger job placement outcomes due to their experience leading authentic technical projects. By intentionally developing student talent, we have built a highly capable and sustainable technical support resource for our college.</p></details></div><div class="dest"><h4>One Institute, Many Campuses: Expanding a Public-Private Data Science Consortium</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Waukesha County Technical College · University of Wisconsin-Milwaukee · Marquette University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/51/6/641/E0A/DF8/464/A9D/D6E/9B6/D24/461/55/a2817_1.pdf" target="_blank" rel="noopener">One Institute Many Campuses Expanding a PublicPrivate Data Science Consortium</a></li></ul><details><summary>Descripción</summary><p>This session will take you inside the Northwestern Mutual Data Science Institute (NMDSI), a first-of-it-kind public-private consortium that is expanding to include three new academic institutions: a medical college, an engineering-focused university, and a technical college with an applied AI lab. Since 2018, the NMDSI has championed AI and data science transformation across southeastern Wisconsin, investing in research, new faculty, student scholarships, academic programs and, since fall 2023, over 100 applied AI and data science student research projects. With this expansion, partners now pool distinctive assets - clinical research and health data expertise, high-performance computing and a supercomputer, and hands-on applied AI and workforce training - to build a more inclusive, practice-centered talent pipeline for the region. Attendees will learn how the consortium structures governance, shared resources, and programming across very different institutions, and how this model can inform similar regional collaborations that align industry needs, academic innovation, and community impact.</p></details></div><div class="dest"><h4>Student Employee Development Process: Improving IT Operations While Developing Student Professionals</h4><div class="info">Miércoles 30 de septiembre · 4:30 p. m. · 1 material</div>
+<div class="inst">Brigham Young University Hawaii</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/90/1/2D4/957/7EC/482/F84/DE5/FBE/866/F92/AA/a833_1.pdf" target="_blank" rel="noopener">Student Employee Development Process</a></li></ul><details><summary>Descripción</summary><p>Our vice president recently instructed our IT staff that &quot;our primary job is not to &#x27;get stuff done.&#x27; It is to MENTOR our students to &#x27;live and lead.&#x27;&quot; That is a sea change for our IT staff and has forced us to rethink much of how we do our work. We&#x27;re actively looking for ways to give our students more &quot;real-life&quot; substantive technical and professional experiences to better prepare them for life after graduation. This is hard to do. Our &quot;process&quot; has grown out of research into how others have tried to effect similar change, and our own learned experiences. The SEDP is a step-by-step process to help our team identify tasks and responsibilities that can be shifted to students; training, resources, and accountability we need to get in place; and managing the transition in a way that helps the students to be successful. We learned hard lessons from assigning work to student employees who weren&#x27;t sufficiently prepared, essentially setting them up for failure. We&#x27;ve also had some great success that has deeply enriched our students&#x27; educational experience and improved our department operations. Participants will learn a six-step approach for deliberately shifting meaningful technical and operational work to students - without sacrificing compliance, service quality, or stability - while turning student employment into a true capstone learning experience. We have used this process in IT and other campus departments, so the content is relevant to managers across higher ed.</p></details></div><div class="dest"><h4>Using Social Media Data to Measure Student Outcomes and Alumni Career Pathways</h4><div class="info">Miércoles 30 de septiembre · 4:30 p. m. · 1 material</div>
+<div class="inst">University of Texas at San Antonio</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/82/3/8F6/F70/A5D/4EC/E89/608/6D2/D7F/876/A6/a1093_1.pdf" target="_blank" rel="noopener">Poster</a></li></ul><details><summary>Descripción</summary><p>As institutions increasingly prioritize demonstrating the long-term value of internships and workforce-readiness initiatives, the ability to effectively track and measure alumni career outcomes has become essential. This session presents a practical, data-driven approach to assessing early career success by leveraging publicly available LinkedIn profiles and other social media sources. By systematically analyzing this information, institutions can identify key indicators such as job titles, industries, geographic mobility, and estimated salary ranges of former interns. Participants will gain insight into how this method can provide a clearer picture of post-program outcomes without requiring extensive alumni surveys or costly data tools. The session will also highlight strategies for organizing and interpreting this data to uncover trends, measure program effectiveness, and benchmark outcomes over time. Additionally, attendees will explore how these insights can be used to strengthen institutional reporting, enhance stakeholder communication, and inform program design. By the end of the session, attendees will leave with actionable ideas for implementing a scalable approach to alumni tracking that supports continuous improvement, aligns with institutional goals, and enables more informed, evidence-based decision-making across departments.</p></details></div><div class="dest"><h4>Develop Job-Ready Graduates with Hands-On Experience for the AI-Driven Workforce</h4><div class="info">Jueves 1 de octubre · 9:30 a. m. · 1 material</div>
+<div class="inst">Skillable</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/6C/F/60A/BF6/8AD/46D/99C/1A6/EA3/790/1B0/DC/a5062_1.pdf" target="_blank" rel="noopener">Develop JobReady Graduates Poster</a></li></ul><details><summary>Descripción</summary><p>Become known for delivering graduates with proven skills in AI, data, cybersecurity, cloud, DevOps, and more. 
+ 
+Today&#x27;s employers aren&#x27;t hiring based on diplomas and GPAs alone; they need confidence that their new hire can do the work. Of the organizations surveyed by NACE, 74% cited experiential learning as the top way students can demonstrate capability in skills-based hiring.  
+ 
+Students pursuing technical roles need time at the keyboard doing real work, with real software and scenarios, solving real problems. But how do you deliver that at scale? 
+ 
+Innovative institutions are using hands-on labs that provide the software, infrastructure, and licensing across an entire curriculum without blowing the budget or stressing IT. Plus, labs give you performance-based data. See who tries to cruise through on autopilot vs. who genuinely demonstrates mastery. 
+ 
+The result? Students walk into interviews with verified credentials and work samples, while your institution becomes known for graduates who get hired fast. 
+ 
+Learn how Skillable’s hands-on lab platform powers experiential learning programs for universities like WGU and GCU, as well as performance-based certifications for Microsoft, CompTIA, and EC-Council.  
+ 
+Stop by our Poster Session Thursday, October 1, from 9:30 to 10:30 a.m. or from 3:15 to 4:15 p.m., to hear from Chief Solutions Officer [ponente] on how to bridge the gap between education and employment.</p></details></div><div class="dest"><h4>AI, Work, and the Redesign Higher Education Can No Longer Delay</h4><div class="info">Jueves 1 de octubre · 1:00 p. m. · 1 material</div>
+<div class="inst">Arapahoe Community College</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/1E/7/549/BE8/235/428/2B9/03B/EDE/721/569/64/a2704_1.pdf" target="_blank" rel="noopener">AI Work and Higher Ed Redesign Presentation</a></li></ul><details><summary>Descripción</summary><p>Artificial intelligence is not only changing teaching and learning. It is also changing the work students are preparing to do and exposing how poorly many inherited higher education structures fit both today’s learners and today’s labor market. This session offers a practical framework for institutional redesign, using the community college context as a leading-edge case for how colleges can rethink learner guidance, employer engagement, work-based learning, and credential pathways in response to AI-driven workforce change.</p></details></div><div class="dest"><h4>Camera-Ready at the Library: Professional Portraits for Academic and Clinical Careers</h4><div class="info">Jueves 1 de octubre · 3:15 p. m. · 1 material</div>
+<div class="inst">Harvard University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/56/C/7E0/08B/4AB/49F/68E/29F/232/D96/899/EB/a709_1.pdf" target="_blank" rel="noopener">Camera Ready At The Library Professional Portraits For Academic And Clinical Careers</a></li></ul><details><summary>Descripción</summary><p>This project began with a single patron’s request for a professional portrait. In response, a small photography studio was created, equipped with high-quality cameras, LED lighting, and a comfortable private space. Patrons schedule a 15-minute session to have their photo taken. Without formal advertising, the service quickly gained popularity through word of mouth. Within 24 hours of announcing the new service, more than 300 requests were submitted. To date, over 6,000 photos have been provided to members of the campus community. This project highlights the library’s role as a provider of practical professional resources, especially during a time of limited budgets in higher education. By offering access to quality media equipment and a free photography service, the studio supports career readiness, professional development, and equitable access. The immediate success of the service has made it a staple of our library offerings. Moving forward, our goal is to scale and streamline the program to ensure sustainability in both cost and labor. Our approach and lessons learned may help other libraries develop similar services and encourage broader conversations about expanding offerings within restrictive budgets. This poster will showcase the studio setup, user feedback, a timeline of service milestones, and future goals and challenges, along with suggestions for scaling the service based on community needs and available resources.</p></details></div><div class="dest"><h4>Develop Job-Ready Graduates with Hands-On Experience for the AI-Driven Workforce</h4><div class="info">Jueves 1 de octubre · 3:15 p. m. · 1 material</div>
+<div class="inst">Skillable</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/D8/3/E08/A7F/C2D/440/189/6A5/A0D/F51/A7A/5E/a5087_1.pdf" target="_blank" rel="noopener">Develop JobReady Graduates Poster</a></li></ul><details><summary>Descripción</summary><p>Become known for delivering graduates with proven skills in AI, data, cybersecurity, cloud, DevOps, and more. 
+ 
+Today&#x27;s employers aren&#x27;t hiring based on diplomas and GPAs alone; they need confidence that their new hire can do the work. Of the organizations surveyed by NACE, 74% cited experiential learning as the top way students can demonstrate capability in skills-based hiring.  
+ 
+Students pursuing technical roles need time at the keyboard doing real work, with real software and scenarios, solving real problems. But how do you deliver that at scale? 
+ 
+Innovative institutions are using hands-on labs that provide the software, infrastructure and licensing across an entire curriculum without blowing the budget or stressing IT. Plus, labs give you performance-based data. See who tries to cruise through on autopilot vs. who genuinely demonstrates mastery. 
+ 
+The result? Students walk into interviews with verified credentials and work samples, while your institution becomes known for graduates who get hired fast. 
+ 
+Learn how Skillable’s hands-on lab platform powers experiential learning programs for universities like WGU and GCU, as well as performance-based certifications for Microsoft, CompTIA, and EC-Council.  
+ 
+Stop by our Poster Session on Thursday, October 1, from 9:30 to 10:30 a.m. or from 3:15 to 4:15 p.m. to hear from Chief Solutions Officer [ponente] on how to bridge the gap between education and employment.</p></details></div></div>
+<a class="boton" href="../sesiones.html?area=trayectoria">Ver las 24 sesiones relacionadas con Trayectoria profesional</a>
+<div class="nota gris" style="border-left-color:var(--gris-500);background:var(--gris-100)"><p>¿Quiere el panorama general? Lea el <a href="../index.html">resumen de 2 minutos</a> o <a href="../dimensiones.html">las cuatro dimensiones</a>.</p></div>
+<nav class="siguiente" aria-label="Continuar leyendo"><a href="admisiones.html"><small>Anterior</small>Admisiones</a><a class="der" href="gestion.html"><small>Siguiente</small>Gestión académica</a></nav></section></main>
+<footer class="pie"><div class="in">
+<div><h2>EDUCAUSE Annual Conference 2026</h2><p>Síntesis del Laboratorio Educativo Digital (LED). Vicerrectoría Académica, Universidad de los Andes. Preparada con apoyo de Claude.</p></div>
+<div><span class="etq">Secciones</span><ul><li><a href="../index.html">Inicio</a></li><li><a href="../dimensiones.html">Dimensiones</a></li><li><a href="../areas/index.html">Áreas</a></li><li><a href="../sesiones.html">Sesiones</a></li><li><a href="../recursos.html">Recursos</a></li></ul></div>
+<div><span class="etq">Actualización</span><p>Contenido con corte al 24 de noviembre de 2026. Incluye los materiales publicados por los ponentes después de la conferencia.</p></div>
+</div></footer>
+
+</body>
+</html>

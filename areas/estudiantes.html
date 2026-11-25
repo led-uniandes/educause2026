@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Decanatura de Estudiantes · EDUCAUSE 2026</title>
+<meta name="description" content="Decanatura de Estudiantes: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:title" content="Decanatura de Estudiantes · EDUCAUSE 2026">
+<meta property="og:description" content="Decanatura de Estudiantes: qué vimos en la EDUCAUSE Annual Conference 2026, por qué le importa al área y recomendaciones.">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QL4SS1MNE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3QL4SS1MNE', {content_group: 'EDUCAUSE 2026'});</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Estilo LED: cabezote y héroe oscuros, Source Sans 3 + Source Serif 4, amarillo como acento, esquinas rectas. */
+:root{
+  --negro:#191916; --tinta:#1f1f1c; --gris-900:#333331; --gris-700:#595959; --gris-500:#73726d; --gris-300:#bab9b3;
+  --gris-200:#e0dfda; --gris-100:#f0efea; --fondo:#fcfcfa; --blanco:#ffffff; --amarillo:#ffe41e; --amarillo-osc:#e0b800; --amarillo-claro:#fff8cc;
+  --O:#5b4a8b; --O-bg:#efecf6; --F:#0b7310; --F-bg:#eaf4ea; --E:#a85a00; --E-bg:#fbefe0; --C:#1f5786; --C-bg:#e6eef6;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --ancho:1240px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--negro)}
+a{color:var(--tinta);text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--amarillo);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--amarillo-osc);outline-offset:2px}
+.in{max-width:var(--ancho);margin:0 auto;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+@media (max-width:600px){ .in{padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))} }
+h1,h2,h3,h4{font-family:var(--sans);text-wrap:balance;margin:0;line-height:1.2;color:var(--tinta)}
+h2{font-size:clamp(28px,3.2vw,34px);font-weight:400}
+h3{font-size:22px;font-weight:600}
+h4{font-size:18px;font-weight:600}
+p{margin:0}
+.etq{font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600;display:block}
+.saltar{position:absolute;left:-999px}
+.saltar:focus{left:16px;top:8px;z-index:50;background:var(--amarillo);padding:8px 12px}
+
+/* Cabezote */
+.cabezote{background:var(--negro);color:var(--fondo);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;border-bottom:1px solid #2e2e2a}
+.cabezote .in{min-height:72px;display:flex;align-items:center;gap:24px}
+.marca{display:flex;align-items:center;gap:14px;color:var(--fondo);text-decoration:none;min-width:0}
+.marca:hover{background:none}
+.marca-logo{display:block;height:44px;width:auto;flex:none}
+.marca-t{font-family:var(--sans);font-size:18px;font-weight:400;padding-left:14px;border-left:1px solid #6b6a64;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--fondo);text-decoration:none;padding:8px 12px;white-space:nowrap;letter-spacing:.01em}
+.menu a:hover,.menu a.on{background:none;box-shadow:inset 0 -3px 0 var(--amarillo)}
+@media (max-width:900px){ .cabezote .in{flex-wrap:wrap;gap:0 16px;padding-block:10px} .menu{margin-left:0;width:100%;margin-top:6px} .menu a{font-size:15px;padding:6px 10px 8px} .marca-t{font-size:16px} }
+@media (max-width:480px){ .marca-t{display:none} }
+
+/* Héroe */
+.heroe{background:var(--negro);color:var(--fondo)}
+.heroe .in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:56px}
+.heroe .etq{color:var(--gris-300)}
+.heroe h1{font-weight:300;font-size:clamp(34px,4.6vw,52px);line-height:1.12;color:var(--fondo);margin:10px 0 18px}
+.heroe .lead{font-size:19px;line-height:1.6;color:#ecebe6}
+.heroe .meta{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.cifras{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3d3d38}
+.cifra{padding:20px 22px;border:1px solid #3d3d38;font-family:var(--sans)}
+.cifra b{display:block;font-weight:300;font-size:40px;line-height:1.1;color:var(--amarillo);font-variant-numeric:tabular-nums}
+.cifra span{font-size:15px;color:#d6d5cf;line-height:1.45;display:block;margin-top:6px}
+@media (max-width:860px){ .heroe .in{grid-template-columns:1fr;padding-block:40px} }
+
+/* Secciones */
+main section{padding-block:64px 8px}
+.cab-sec{border-top:1px solid var(--gris-200);padding-top:28px;margin-bottom:26px;max-width:72ch;display:grid;gap:10px}
+.cab-sec p{color:var(--gris-700)}
+
+.puntos{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:p;max-width:880px}
+.puntos li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:18px 0;border-bottom:1px solid var(--gris-200)}
+.puntos li strong{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1.35}
+@media (max-width:640px){ .puntos li{grid-template-columns:1fr} }
+
+.nota{border-left:4px solid var(--amarillo-osc);background:var(--amarillo-claro);padding:16px 20px;margin:26px 0 0;max-width:880px}
+.nota h3,.nota h4{font-size:17px;margin-bottom:8px}
+.nota ul,.nota ol{margin:0;padding-left:20px;display:grid;gap:6px}
+
+/* Dimensiones */
+.dimnav{display:flex;flex-wrap:wrap;gap:0;margin-bottom:30px;border:1px solid var(--gris-200);background:var(--blanco);width:max-content;max-width:100%}
+.dimnav a{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;font-family:var(--sans);font-weight:600;font-size:15px;text-decoration:none;border-right:1px solid var(--gris-200)}
+.dimnav a:last-child{border-right:0}
+.cuad{width:12px;height:12px;background:var(--c);flex:none;display:inline-block}
+.dim{margin-bottom:56px}
+.dim-cab{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:3px solid var(--c);padding-bottom:10px;margin-bottom:16px}
+.dim-cab h3{font-size:clamp(24px,2.6vw,30px);font-weight:400;display:flex;align-items:center;gap:12px}
+.dim-cab .ver{font-family:var(--sans);font-size:15px;font-weight:600}
+.dim .lead{max-width:72ch;font-size:18px;margin-bottom:20px}
+.hallazgos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.hallazgo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:8px;min-width:0}
+.hallazgo p{font-size:16px}
+.hallazgo ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--gris-900);display:grid;gap:4px}
+.fuente{font-family:var(--sans);font-size:14px;color:var(--gris-700);margin-top:auto;padding-top:8px}
+.fuente b{font-weight:600;color:var(--tinta)}
+
+/* Áreas */
+.pestanas{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--gris-300);margin-bottom:24px}
+.pestanas button{font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 16px;border:0;background:none;color:var(--gris-700);cursor:pointer;margin-bottom:-1px;border-bottom:3px solid transparent}
+.pestanas button:hover{color:var(--tinta)}
+.pestanas button[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--amarillo-osc)}
+.ficha{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px 40px}
+.ficha h3{grid-column:1/-1;font-size:28px;font-weight:400}
+.ficha .bloque{display:grid;gap:10px;align-content:start;min-width:0}
+.ficha ul{margin:0;padding-left:20px;display:grid;gap:10px;font-size:16.5px}
+.ficha .nota{margin:8px 0 0}
+@media (max-width:820px){ .ficha{grid-template-columns:1fr} }
+
+/* Sesiones */
+.filtros{display:grid;gap:12px;background:var(--blanco);border:1px solid var(--gris-200);padding:16px;margin-bottom:16px;font-family:var(--sans)}
+.fila{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fila .lbl{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-500);font-weight:600;min-width:120px}
+.filtros input[type=search]{flex:1 1 280px;min-width:0;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0}
+.filtros select{font:inherit;font-size:15px;padding:9px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);border-radius:0;max-width:100%}
+.chip{font:inherit;font-size:15px;padding:5px 12px;border:1px solid var(--gris-300);background:var(--fondo);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:0}
+.chip:hover{border-color:var(--tinta)}
+.chip[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--fondo)}
+.chip[aria-pressed="true"] .n{color:var(--gris-300)}
+.chip .n{color:var(--gris-500);font-variant-numeric:tabular-nums}
+.limpiar{font:inherit;font-size:15px;background:none;border:0;color:var(--tinta);cursor:pointer;text-decoration:underline;text-decoration-color:var(--amarillo-osc);text-decoration-thickness:2px;text-underline-offset:3px;padding:4px}
+.conteo{font-family:var(--sans);font-size:16px;color:var(--gris-700);margin:8px 0}
+.conteo b{color:var(--tinta)}
+.dia{font-family:var(--sans);font-weight:300;font-size:30px;margin:34px 0 6px}
+.hora{font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.02em;margin:18px 0 8px;font-variant-numeric:tabular-nums}
+.ses{background:var(--blanco);border:1px solid var(--gris-200);border-left:4px solid var(--c,var(--gris-300));padding:14px 16px;margin:8px 0;display:grid;gap:6px;min-width:0}
+.ses.blk{background:var(--gris-100)}
+.ses-sup{display:flex;gap:14px;justify-content:space-between;align-items:flex-start}
+.ses h4{font-size:18px;line-height:1.3}
+.ses .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.ses .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;font-family:var(--sans)}
+.tag{font-size:13px;padding:1px 8px;background:var(--gris-100);color:var(--gris-700)}
+.tag.d{background:var(--cbg);color:var(--c);font-weight:600}
+.tag.p{background:none;border:1px solid var(--gris-300)}
+.tag.cu{background:none;border:1px solid var(--amarillo-osc);color:var(--tinta)}
+.mat{flex:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:2px 9px;background:var(--amarillo);color:var(--negro);white-space:nowrap}
+.mat.no{background:var(--gris-100);color:var(--gris-700);font-weight:400}
+.ses details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.ses details p{white-space:pre-line;font-size:16px;margin-top:6px;max-width:80ch}
+.ses .lnk{font-family:var(--sans);font-size:14.5px;color:var(--gris-700);border-left:3px solid var(--amarillo-osc);padding-left:8px}
+.mas{display:block;margin:22px auto 0;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 20px;border:1px solid var(--tinta);background:var(--blanco);color:var(--tinta);cursor:pointer}
+.mas:hover{background:var(--amarillo)}
+.vacio{padding:36px;text-align:center;color:var(--gris-700)}
+
+/* Recursos */
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.rgrupo{padding:18px 20px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);min-width:0}
+.rgrupo h3{font-size:19px;margin-bottom:12px}
+.rgrupo ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rgrupo li a{overflow-wrap:anywhere}
+.rgrupo li span{display:block;font-family:var(--sans);font-size:14px;color:var(--gris-500)}
+
+/* Método */
+.metodo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);margin-bottom:24px;background:var(--blanco)}
+.metodo div{padding:16px 18px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);font-family:var(--sans)}
+.metodo b{display:block;font-weight:300;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}
+.metodo span{font-size:15px;color:var(--gris-700)}
+.notas{max-width:72ch;display:grid;gap:10px}
+
+/* Pie */
+.pie{background:var(--negro);color:#d6d5cf;margin-top:72px;font-family:var(--sans);font-size:15px}
+.pie .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:28px;padding-block:40px 48px}
+.pie h2{font-family:var(--sans);font-size:20px;font-weight:600;color:var(--fondo);margin-bottom:8px}
+.pie .etq{color:var(--gris-300);margin-bottom:8px}
+.pie a{color:var(--fondo)}
+.pie a:hover{color:var(--negro)}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+@media (max-width:760px){ .pie .in{grid-template-columns:1fr} }
+
+/* Capas y páginas */
+.capa{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--negro);background:var(--amarillo);padding:3px 10px;margin-bottom:12px}
+.miga{font-family:var(--sans);font-size:15px;color:var(--gris-300);margin-bottom:14px}
+.miga a{color:var(--fondo)}
+.miga a:hover{color:var(--negro)}
+.heroe.corto .in{grid-template-columns:minmax(0,1fr);padding-block:44px}
+.heroe.corto h1{font-size:clamp(32px,4vw,46px);margin-bottom:12px}
+.rutas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.ruta{padding:22px 22px 24px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);display:flex;flex-direction:column;gap:10px;min-width:0}
+.ruta .capa{align-self:flex-start;margin:0}
+.ruta h3{font-size:22px;font-weight:400}
+.ruta p{font-size:16px;color:var(--gris-900)}
+.ruta ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-family:var(--sans);font-size:16px}
+.ruta .ir{margin-top:auto;font-family:var(--sans);font-weight:600}
+@media (max-width:900px){ .rutas{grid-template-columns:1fr} }
+.lista-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border-top:1px solid var(--gris-200);border-left:1px solid var(--gris-200);background:var(--blanco)}
+.lista-areas a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border-right:1px solid var(--gris-200);border-bottom:1px solid var(--gris-200);text-decoration:none}
+.lista-areas a:hover{background:var(--amarillo-claro)}
+.lista-areas strong{font-family:var(--sans);font-size:20px;font-weight:600}
+.lista-areas span{font-size:15.5px;color:var(--gris-700)}
+.destacadas{display:grid;gap:0;border-top:1px solid var(--gris-200)}
+.dest{padding:16px 0;border-bottom:1px solid var(--gris-200);display:grid;gap:4px}
+.dest h4{font-size:18px}
+.dest .info{font-family:var(--sans);font-size:15px;color:var(--gris-700)}
+.dest .inst{font-family:var(--sans);font-size:15.5px;font-weight:600}
+.dest ul.mats{margin:2px 0 0;padding-left:20px;font-family:var(--sans);font-size:15.5px}
+.dest details summary{cursor:pointer;font-family:var(--sans);font-size:15px;font-weight:600;width:max-content}
+.dest details p{font-size:16px;margin-top:6px;max-width:80ch;white-space:pre-line}
+.boton{display:inline-block;font-family:var(--sans);font-size:16px;font-weight:600;padding:10px 18px;border:1px solid var(--tinta);background:var(--blanco);text-decoration:none;margin-top:18px}
+.boton:hover{background:var(--amarillo)}
+.siguiente{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;border-top:1px solid var(--gris-200);padding-top:24px;font-family:var(--sans)}
+.siguiente a{text-decoration:none;padding:14px 16px;border:1px solid var(--gris-200);background:var(--blanco);display:grid;gap:2px}
+.siguiente a:hover{background:var(--amarillo-claro)}
+.siguiente small{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris-500);font-weight:600}
+.siguiente .der{text-align:right}
+@media (max-width:640px){ .siguiente{grid-template-columns:1fr} .siguiente .der{text-align:left} }
+</style>
+
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabezote"><div class="in">
+<a class="marca" href="../index.html"><img class="marca-logo" src="../logo-led.png" alt="Laboratorio Educativo Digital, Universidad de los Andes" width="115" height="44"><span class="marca-t">EDUCAUSE 2026 · Tecnología y educación superior</span></a>
+<nav class="menu" aria-label="Secciones"><a href="../index.html">Inicio</a><a href="../dimensiones.html">Dimensiones</a><a href="../areas/index.html" class="on" aria-current="page">Áreas</a><a href="../sesiones.html">Sesiones</a><a href="../recursos.html">Recursos</a></nav>
+</div></header>
+<div class="heroe corto"><div class="in"><div><div class="miga"><a href="../index.html">Inicio</a> / <a href="../areas/index.html">Áreas</a> / Decanatura de Estudiantes</div><span class="capa">Capa 2 · Lectura de 5 minutos</span><span class="etq">Ficha por área</span>
+<h1>Decanatura de Estudiantes</h1><p class="lead">La Decanatura recibe los efectos de la IA antes de que lleguen a las políticas, en el bienestar, la carga y la manera en que los estudiantes piden ayuda. La conferencia mostró que los asistentes y las alertas tempranas dan resultado cuando hay un responsable humano y un flujo de intervención claro. También mostró que las herramientas compradas pueden atender peor a estudiantes de primera generación o de grupos subrepresentados, y eso obliga a probarlas por grupo antes de adoptarlas.</p></div></div></div>
+<main id="contenido">
+<section class="in"><div class="ficha">
+<div class="bloque"><span class="etq">Qué vimos</span><ul><li>Los asistentes para estudiantes pasaron de responder preguntas frecuentes a conocer la situación de cada estudiante; University of South Carolina y California State University, San Bernardino los autentican y los conectan con asesores humanos.</li><li>University of Wisconsin-Superior revisa de forma central unas 1.400 alertas tempranas y lanza campañas de citas, con entre 12 y 17 % más persistencia en quienes recibieron apoyo.</li><li>Boston University probó seis herramientas de IA con la consulta de un estudiante LGBTQIA+ de primera generación, y los asistentes de carrera comerciales dieron las respuestas menos profundas.</li><li>Colorado Mountain College recordó que al menos el 10 % de los estudiantes tiene un diagnóstico neurocognitivo documentado, y Denison University exigió a 722 estudiantes de primer ingreso un módulo digital de unos 50 minutos.</li></ul></div>
+<div class="bloque"><span class="etq">Por qué le importa al área</span><p>La Decanatura recibe los efectos de la IA antes de que lleguen a las políticas, en el bienestar, la carga y la manera en que los estudiantes piden ayuda. La conferencia mostró que los asistentes y las alertas tempranas dan resultado cuando hay un responsable humano y un flujo de intervención claro. También mostró que las herramientas compradas pueden atender peor a estudiantes de primera generación o de grupos subrepresentados, y eso obliga a probarlas por grupo antes de adoptarlas.</p>
+<div class="nota"><h4>Recomendaciones</h4><ol><li>Antes de adoptar un asistente o un sistema de alertas, definir qué datos lee, cuándo interviene una persona y quién responde por cada alerta.</li><li>Probar con perfiles de estudiantes reales cualquier herramienta de acompañamiento comprada y comparar la calidad de las respuestas por grupo.</li><li>Incorporar en la inducción un módulo corto de habilidades digitales e IA que tomen todos los estudiantes de primer semestre.</li></ol></div></div></div></section>
+<section class="in"><div class="cab-sec"><span class="etq">Para ir más a fondo</span><h2>Sesiones destacadas para Decanatura de Estudiantes</h2><p>Una selección de 10 de las 52 sesiones relacionadas con esta área. Se priorizan las que tienen materiales publicados por sus ponentes, con enlace directo a cada archivo.</p></div>
+<div class="destacadas"><div class="dest"><h4>Built, Not Bought: Delivering a Fast, Frugal, and Fully Accessible Virtual Safety Walk Mobile App</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Houston</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/9E/A/393/E50/95F/465/BA4/85F/7CB/859/1F4/4E/a3669_1.pdf" target="_blank" rel="noopener">Built Not Bought Poster</a></li></ul><details><summary>Descripción</summary><p>In today’s evolving campus environment, students expect fast, mobile-first services. At the University of Houston (UH), we saw an opportunity to meet these needs by leveraging creative technology solutions where we could deliver a safety-focused app with custom features. With limited resources and a growing need for scalable solutions, we partnered with the University of Houston Police Department (UHPD) to build the UHPD app featuring the Virtual Safety Walk. This digital alternative to traditional escorts allows students to request a virtual safety walk directly from their remotely monitored phones, eliminating the wait for an officer to be dispatched, optimizing the use of valuable personnel, and saving time in students&#x27; busy schedules. Using UH property lines (geofencing) and real-time location tracking, UHPD can virtually monitor a student’s walk and respond quickly as needed, greatly improving response time and campus coverage. Originally designed to be provided in UH Go, the UH official mobile app, the university pivoted to a standalone app as part of our ecosystem to meet the needs of users and UHPD. Designed with student habits in mind, the app is fast, intuitive, and available 24/7. It empowers users with control and convenience while enhancing campus safety through smarter, tech-driven solutions. Come to this session and learn more.</p></details></div><div class="dest"><h4>From Data to Insights to Actions: Leveraging Analytics for Student Success</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">Jenzabar · United Tribes Technical College</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/01/C/5DA/EA7/C8D/413/6BA/692/73F/609/255/DD/a2947_1.pdf" target="_blank" rel="noopener">From Data to Insights to Actions Poster</a></li></ul><details><summary>Descripción</summary><p>This session will provide attendees with an overview of how United Tribes Technical College (UTTC) has used data analytics to examine student performance across various demographics and student characteristics, created targeted recruitment strategies, and implemented student success initiatives. Participants in this session will be provided with real-world examples that can be replicated at their institutions.</p></details></div><div class="dest"><h4>Supporting Students with Disabilities in Online Higher Education: Bridging the Transition Gap</h4><div class="info">Miércoles 30 de septiembre · 9:30 a. m. · 1 material</div>
+<div class="inst">National University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/B1/9/9CD/CF2/0C8/4A9/494/D19/E17/53C/DBB/65/a1381_1.pdf" target="_blank" rel="noopener">Resources for Students with Disabilities in Online Higher Ed poster session</a></li></ul><details><summary>Descripción</summary><p>As online learning continues to expand in higher education, students with disabilities often face significant challenges navigating support services and accommodations. Many students transition from secondary environments, where services are mandated under IDEA, to postsecondary settings where they must self-advocate and independently access resources. This shift creates a crucial gap that can impact student success.This session is designed for faculty teaching in online environments who want to better support students with disabilities. Participants will examine the transition from secondary to postsecondary education and explore how differences in service models affect student access and equity. The session will highlight the barriers students encounter and the role faculty can play to address them. Through guided student scenarios and discussion, participants will identify strategies to recognize when students may need additional support, apply inclusive practices within their courses, and connect students to institutional services. Participants will also develop a course of action tailored to their own teaching context, including modifying syllabus language, creating communication plans, and establishing referral pathways. By the end of the session, faculty will be better equipped to support student success in online higher education environments.</p></details></div><div class="dest"><h4>High School to the Hill: Integrating Digital Foundations into First-Year Orientation</h4><div class="info">Miércoles 30 de septiembre · 3:30 p. m. · 1 material</div>
+<div class="inst">Denison University</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/F1/8/46F/711/274/47B/5A3/20F/44D/4F3/59A/21/a3258_1.pdf" target="_blank" rel="noopener">High School to the Hill Integrating Digital Foundations into FirstYear Orientation</a></li></ul><details><summary>Descripción</summary><p>In recent years, faculty have observed that students often lack essential tech skills in areas such as file management and storage, digital library resources, cybersecurity, operating systems, and troubleshooting. These gaps create unnecessary stress as students begin their academic journeys, and can detract from valuable class time. Denison’s Educational Technology team partnered with Cybersecurity, the Library, Enrollment, Fraternity and Sorority Life, and First-Year Experience to address these skill gaps through asynchronous Canvas modules. Designed as a bridge between incoming students’ high school tech skills and the competencies expected in college, our approach encourages reflection on past practices, includes practical hands-on activities, and introduces students to our campus culture. The design was informed by faculty insights, in-class observations, surveys of current first-years, and feedback from students involved in fraternities and sororities. Incoming students completed the modules in July 2026 as part of their onboarding prior to moving to campus. Our presentation will outline our planning, data collection, course design, coordination with campus partners, and reflections/lessons learned on the outcomes of this pilot initiative. Participants will have opportunities to brainstorm how to implement similar initiatives at their institutions, including identifying areas for digital skill-strengthening, potential collaborators, and developing actionable next steps.</p></details></div><div class="dest"><h4>How to Leverage AI and Analytics to Impact Student Success</h4><div class="info">Miércoles 30 de septiembre · 3:30 p. m. · 1 material</div>
+<div class="inst">Gartner Inc</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/8F/E/1BC/FD4/63D/4F3/B94/B25/927/486/11B/20/a4972_1.pdf" target="_blank" rel="noopener">How to Leverage AI and Analytics to Impact Student Success</a></li></ul><details><summary>Descripción</summary><p>Discover how higher education leaders are turning AI and analytics into a real student success impact. In this session, attendees will learn how institutions are moving beyond dashboards to deliver personalized, proactive support using GenAI, predictive analytics, and emerging AI agents. CIOs and technology leaders will leave with practical steps they can take now - such as maximizing existing tools, strengthening data foundations, and unifying stakeholders around a shared student success strategy - to accelerate time to value without new spending. 
+ 
+Drawing on examples from institutions already using AI to streamline advising, surface risk earlier, and guide students toward better pathways, the session highlights what’s others are doing today. Attendees will leave with actionable frameworks, examples, and a clear Now → Near → Next roadmap to advance student success outcomes on their own campuses.</p></details></div><div class="dest"><h4>An AI-Enabled Wellbeing and Advising Framework: From Fragmented Data to Coordinated Student Support</h4><div class="info">Miércoles 30 de septiembre · 4:30 p. m. · 1 material</div>
+<div class="inst">Tecnologico de Monterrey</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/E6/8/E2A/277/F3D/4E0/3B4/593/AA6/31F/93B/1E/a5260_1.pdf" target="_blank" rel="noopener">Not just chatbots a network of specialized agents orchestrators and humans in the loop so 500 1</a></li></ul><details><summary>Descripción</summary><p>This session presents the Wellbeing &amp; Advising Framework (WAF), an institutional program at Tecnológico de Monterrey that leverages artificial intelligence, learning analytics, and coordinated support systems to transform student success across the academic lifecycle - from admission to graduation. 
+
+WAF addresses a persistent challenge in higher education: fragmented data and disconnected support services that delay timely, personalized interventions. This session offers an honest narrative of what it takes to design, pilot, and scale AI infrastructure within a complex, multi-campus institution - not a finished product, but a replicable model in motion. 
+
+The framework combines four key capabilities: real-time risk detection through early-alert intelligence; holistic student profiles integrating academic, behavioral, and wellbeing data; an AI-powered policy assistant (TECbot) that translates complex regulations into actionable guidance; and a personalization engine connecting students to co-curricular opportunities aligned to their trajectory. Early results show strong adoption: over 40% of program directors and advisors actively using the platform and a satisfaction score of 4.83 out of 5. 
+
+Participants will gain practical insight into designing a human-centered, AI-enabled student support ecosystem - enabling 500+ mentors and advisors across 26 campuses to move from reactive counseling to proactive, coordinated, and personalized student success strategies.</p></details></div><div class="dest"><h4>From Help Desk to Home Base: Reimagining IT as a Hub for Student Engagement</h4><div class="info">Miércoles 30 de septiembre · 4:30 p. m. · 1 material</div>
+<div class="inst">University of Wyoming</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/16/F/F67/294/D6C/4D7/1A7/3C4/C93/E4E/316/F6/a2345_1.pdf" target="_blank" rel="noopener">Presentation Poster</a></li></ul><details><summary>Descripción</summary><p>Information Technology organizations are uniquely positioned to advance student success by moving beyond infrastructure and intentionally creating spaces, jobs, and communities where students learn, belong, and thrive. Where IT becomes a place students actively want to be. In this session, leaders from the University of Wyoming show you how to take IT to the next level in student engagement and share a practical, replicable model for making IT a student home base through integrated makerspaces, experiential student employment, campus partnerships, and inclusive events that directly support engagement, career readiness, and academic success.</p></details></div><div class="dest"><h4>Beyond Predictive Analytics: Human-Centered AI for Student Experience and Early Signals</h4><div class="info">Jueves 1 de octubre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of Cincinnati</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/13/C/26C/122/9E0/435/485/6A8/BF4/77A/E63/BA/a3831_1.pdf" target="_blank" rel="noopener">PosterBeyond Predictive Analytics HumanCentered AI for Student Experience and Early Signals Pr</a></li></ul><details><summary>Descripción</summary><p>Most student success efforts rely on lagging indicators such as grades, course outcomes, and risk scores. However, these signals often surface only after students begin to struggle or disengage - and sometimes leave. This session introduces a human-centered AI approach that enables earlier and more meaningful intervention by shifting the focus to such leading indicators embedded in the student experience as belonging, clarity, and help-seeking readiness. Participants will explore how AI can surface these signals while keeping decision-making human-centered and engage in interactive activities to identify practical ways to apply this approach within their own institutional contexts.</p></details></div><div class="dest"><h4>Scaling Advising: A Multi-Agent RAG System with Institutional Guardrails for Student Success</h4><div class="info">Jueves 1 de octubre · 9:30 a. m. · 1 material</div>
+<div class="inst">University of South Carolina</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/29/D/040/039/1B0/4C3/586/F9D/0AE/F2A/635/4C/a4797_1.pdf" target="_blank" rel="noopener">Scaling Advising A MultiAgent RAG System with Institutional Guardrails for Student Success</a></li></ul><details><summary>Descripción</summary><p>What does it take to safely use large language models (LLMs) for academic advising? This session shows how a multi-agent, guardrail-driven AI assistant can deliver accurate, citation-backed answers to complex policy questions, reduce advising bottlenecks, and maintain trust by deferring high-risk requests to human advisors.</p></details></div><div class="dest"><h4>Turning Early Alerts into Impact: A Coordinated, Data-Informed Model for Student Success</h4><div class="info">Jueves 1 de octubre · 9:30 a. m. · 2 materiales</div>
+<div class="inst">University of Wisconsin-Superior</div><ul class="mats"><li><a href="https://files.abstractsonline.com/CTRL/A7/C/AA4/E4A/8DD/437/994/368/06A/92E/AB9/35/a2365_2.pdf" target="_blank" rel="noopener">Turning Early Alerts Into Impact Implementation Toolkit</a></li><li><a href="https://files.abstractsonline.com/CTRL/A7/C/AA4/E4A/8DD/437/994/368/06A/92E/AB9/35/a2365_1.pdf" target="_blank" rel="noopener">Turning Alerts into Impact</a></li></ul><details><summary>Descripción</summary><p>Institutions increasingly rely on early alerts and predictive analytics to support student success, but without clear ownership and coordinated workflows, alerts often fail to translate into meaningful action. This session presents a scalable, campaign-based model for converting academic alerts into completed interventions that improve persistence and demonstrate institutional impact .Using a campus case study, presenters will share how clearly defined alert ownership, role-routed outreach, and automated appointment campaigns reduced intervention friction, protected staff capacity, and led to measurable gains in student persistence. The session will also explore how persistence outcomes were translated into maintained tuition revenue to support strategic decision-making and leadership buy-in. Participants will leave with adaptable design principles to build alert-to-action systems that align teaching and learning goals with institutional strategy, whether they use Navigate360 or other student success platforms.</p></details></div></div>
+<a class="boton" href="../sesiones.html?area=estudiantes">Ver las 52 sesiones relacionadas con Decanatura de Estudiantes</a>
+<div class="nota gris" style="border-left-color:var(--gris-500);background:var(--gris-100)"><p>¿Quiere el panorama general? Lea el <a href="../index.html">resumen de 2 minutos</a> o <a href="../dimensiones.html">las cuatro dimensiones</a>.</p></div>
+<nav class="siguiente" aria-label="Continuar leyendo"><a href="index.html"><small>Anterior</small>Todas las áreas</a><a class="der" href="continua.html"><small>Siguiente</small>Educación Continua</a></nav></section></main>
+<footer class="pie"><div class="in">
+<div><h2>EDUCAUSE Annual Conference 2026</h2><p>Síntesis del Laboratorio Educativo Digital (LED). Vicerrectoría Académica, Universidad de los Andes. Preparada con apoyo de Claude.</p></div>
+<div><span class="etq">Secciones</span><ul><li><a href="../index.html">Inicio</a></li><li><a href="../dimensiones.html">Dimensiones</a></li><li><a href="../areas/index.html">Áreas</a></li><li><a href="../sesiones.html">Sesiones</a></li><li><a href="../recursos.html">Recursos</a></li></ul></div>
+<div><span class="etq">Actualización</span><p>Contenido con corte al 24 de noviembre de 2026. Incluye los materiales publicados por los ponentes después de la conferencia.</p></div>
+</div></footer>
+
+</body>
+</html>
